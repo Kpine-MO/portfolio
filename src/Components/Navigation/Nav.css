@@ -1,0 +1,45 @@
+.navContainer{
+    width: 100%;
+    height: 60px;
+    background-color: #0d1b21;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0px auto;
+    font-size: medium;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo{
+    color: olive;
+}
+
+#ulNavLinks a:hover{
+    border-bottom: 2px solid olive;
+}
+
+#ulNavLinks{
+  display: flex;  
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+  color: lightgrey;
+  margin-left: 20px;
+}
+
+#ulNavLinks a{
+    list-style: none;
+    padding-bottom: 5px;
+    border: 2px solid transparent;
+    transition: 1s;
+    text-decoration: none;
+    color: white;
+}
+
+.navLinks{
+    margin-right: 50px;
+}

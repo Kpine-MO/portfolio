@@ -1,0 +1,135 @@
+.heroContainer{
+    width: 100%;
+    height: 90vh;
+    background-color:#0d1b21;
+    display: flex;
+}
+
+.decore{
+    position: absolute;
+    width: 550px;
+    height: 80vh;
+    border: 3px solid olive;
+    right: 20px;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.leftContent{
+    margin-left: 60px;
+    margin-top: 120px;
+    color: lightgray;
+    font-family: montserrat;
+    width: fit-content;
+}
+
+.leftContent h1{
+   font-weight: bolder;
+   width: 415px;
+   margin-top: -20px;
+   text-transform: uppercase;
+}
+
+.fade{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.leftContent h4{
+    font-size: medium;
+    font-family: montserrat;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.leftContent p{
+    font-size: smaller;
+    font-family: montserrat;
+    font-weight: lighter;
+
+}
+
+.heroBtn{
+    margin-top: 50px;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: olive;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.rightContent{
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+    background-image: url(/src/Assets/images/pexels-spencer-selover-428333-removebg.png);
+}
+
+.heroAbsolute{
+    position: absolute;
+}
+
+.react{
+    left: 700px;
+    top: 70px;
+    color: skyblue;
+}
+
+.css{
+    left: 600px;
+    top: 170px;
+    color: rgb(76, 76, 210);
+}
+
+.js{
+    left: 600px;
+    top: 300px;
+    color: rgb(212, 151, 37);
+}
+
+.ruby{
+    right: 40px;
+    top: 200px;
+    color: rgb(114, 9, 9);
+}
+
+.html{
+    right: 40px;
+    top: 80px;
+    color: rgb(214, 64, 64);
+}
+
+/* .psql{
+    left: 200px;
+    bottom: 40px;
+    color: rgb(50, 151, 191); 
+} */
+
+.sql{
+    right: 550px;
+    bottom: 80px;
+    color: rgb(35, 118, 151);
+}
+
+.socialLinks{
+    display: flex;
+    color: gray;
+    justify-content: space-between;
+    width: 110px;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
