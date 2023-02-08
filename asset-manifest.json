@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfoli/static/css/main.5a6b3766.css",
+    "main.js": "/portfoli/static/js/main.6f540d5c.js",
+    "static/js/787.0c3f432a.chunk.js": "/portfoli/static/js/787.0c3f432a.chunk.js",
+    "static/media/pexels-spencer-selover-428333-removebg.png": "/portfoli/static/media/pexels-spencer-selover-428333-removebg.27a942860758acad6593.png",
+    "static/media/CZGHPChUAAA3jqE.png": "/portfoli/static/media/CZGHPChUAAA3jqE.7da60e11d23f4dfb98e0.png",
+    "static/media/Ekran-Resmi-2019-11-18-18.08.13.png": "/portfoli/static/media/Ekran-Resmi-2019-11-18-18.08.13.eb0f58cf7cb8f4d8912b.png",
+    "static/media/JavaScript-logo.png": "/portfoli/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
+    "index.html": "/portfoli/index.html",
+    "main.5a6b3766.css.map": "/portfoli/static/css/main.5a6b3766.css.map",
+    "main.6f540d5c.js.map": "/portfoli/static/js/main.6f540d5c.js.map",
+    "787.0c3f432a.chunk.js.map": "/portfoli/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a6b3766.css",
+    "static/js/main.6f540d5c.js"
+  ]
+}
