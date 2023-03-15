@@ -11,7 +11,80 @@
         {
             "id": 1,
             "name": "progect one",
-            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/51yzXRsP89L._SX319_BO1,204,203,200_.jpg"
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 1,
+            "name": "progect one",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 1,
+            "name": "progect one",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 1,
+            "name": "progect one",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "technologies": "React js front-end application with custom css and json server"
+        }
+    ],
+    "allProjects": [
+        {
+            "id": 1,
+            "title": "progect one",
+            "year": "2022",
+            "madeAt": "Moringa",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "buildWith": "react js",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 2,
+            "title": "progect one",
+            "year": "2022",
+            "madeAt": "Moringa School",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "buildWith": "react js",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 1,
+            "title": "progect one",
+            "year": "2022",
+            "madeAt": "Moringa",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "buildWith": "react js",
+            "technologies": "React js front-end application with custom css and json server"
+        },
+        {
+            "id": 1,
+            "title": "progect one",
+            "year": "2022",
+            "madeAt": "Moringa",
+            "imgUrl": "https://i.postimg.cc/Qx0xJtHp/Screenshot-2023-02-16-at-14-34-17.png",
+            "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+            "github": "https://github.com/Kpine-MO/Online-Library",
+            "buildWith": "react js",
+            "technologies": "React js front-end application with custom css and json server"
         }
     ]
 }

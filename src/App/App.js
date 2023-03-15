@@ -1,25 +1,33 @@
-import './App.css';
+import "./App.css";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
-import Nav from '../Components/Navigation/Nav';
-import Home from '../Components/Home/Home';
-import Ps from '../Components/ProjectSnippet/Ps';
-import React from '../Components/React/React';
-import Footer from '../Components/Footer/Footer';
+import Nav from "../Components/Navigation/Nav";
+import Home from "../Components/Home/Home";
+import Ps from "../Components/ProjectSnippet/Ps";
+import React from "../Components/React/React";
+import Footer from "../Components/Footer/Footer";
+import Ruby from "../Components/Ruby/Ruby";
+import JavaS from "../Components/JavaScript/JavaS";
+import Html from "../Components/HtmlFolder/Html";
+import Cascading from "../Components/Cascading/Cascading";
 
 function App() {
   return (
     <div className="App">
-     <Router>
-     <Nav/>
-     {/* <Hero/>
-     <Ps/> */}
-     <Routes>
-    <Route exact path='/home' element={<Home/>}/>
-    <Route exact path='ps' element={<Ps/>}/>
-    <Route exact path='react' element={<React/>}/>
-     </Routes>
-     <Footer/>
-     </Router>
+      <Router>
+        <Nav />
+
+        <Routes>
+          <Route exact path='/home' element={<Home/>}/>
+          <Route exact path="/ps" element={<Ps/>}/>
+          <Route exact path="/react" element={<React/>}/>
+          <Route exact path="/ruby" element={<Ruby/>}/>
+          <Route exact path="/js" element={<JavaS/>}/>
+          <Route exact path="/html" element={<Html/>}/>
+          <Route exact path="/css" element={<Cascading/>}/>
+        </Routes>
+        
+        <Footer />
+      </Router>
     </div>
   );
 }

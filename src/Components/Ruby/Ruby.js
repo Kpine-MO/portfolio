@@ -3,7 +3,7 @@ import Psc from '../ProjectSnippetCard/Psc'
 import Psc2 from '../ProjectSnippetCard/Psc2'
 
 
-function ProjectReact() {
+function Ruby() {
     
     const [allProjects, setAllProjects] = useState([])
 
@@ -41,4 +41,4 @@ function ProjectReact() {
   )
 }
 
-export default ProjectReact
+export default Ruby

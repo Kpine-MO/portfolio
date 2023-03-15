@@ -1,12 +1,13 @@
 .pscIcons{
     width:fit-content;
     height: fit-content;
+    color: rgba(52,136,129,255);
 }
 
 .boundry{
     height: 17px;
     width: 1px;
-    background-color: black;
+    background-color: rgba(52,136,129,255);
     position: absolute;
     margin: 0 1px;
 }

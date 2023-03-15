@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:wght@800&family=Roboto:wght@300&display=swap');
+
+.App{
+    width: 100%;
+    height: fit-content;
+    scroll-behavior: smooth;
+    background-color: rgba(10,25,47,255);
+
+}

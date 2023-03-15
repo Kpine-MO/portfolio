@@ -1,13 +1,14 @@
 .footerContainer{
     height: 25vh;
     width: 100%;
-    background-color: lightgray;
+    background-color: #d7e0e5;
     color: rgb(13, 27, 33);
+    margin-top: 150px;
 }
 
 .footerHolder{
-    width: 90%;
-    margin: 10px auto;
+    width: 80%;
+    margin: 20px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -28,7 +29,7 @@
     border-radius: 50%;
     padding: 10px;
     margin: 5px;
-    color: white;
+    color: #ccd6f6;
     cursor: pointer;
 }
 

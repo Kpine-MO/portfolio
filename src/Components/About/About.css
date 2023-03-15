@@ -1,17 +1,201 @@
 .aboutContainer{
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    height: 55vh;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    border: 1px solid rgb(13, 27, 33);
+    margin: 0;
+    height: 240vh;
+    background-image:linear-gradient( rgba(17,34,64,0.4), rgba(17,34,64,0.4)), url(/src/Assets/images/experience-lg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: -22px;
+    position: relative;
 }
 
-.aboutContent{
+/* .headerWrap{
+    background-color: rgba(17,34,64,);
+} */
+
+.aboutHolder{
+    width: 70%;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+
+.tree{
+    width: 2px;
+    background-color:  rgb(37, 223, 207);
+    height: 1300px;
+    position: absolute;
+    left: 50%;
+}
+
+.triangle{
+    position: absolute;
+    left: 46.96%;
+    bottom: 85px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+      
+    border-top: 16px solid rgb(37, 223, 207);
+
+    margin: 2rem;
+}
+
+.experienceTitle{
+    font-family: serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #ccd6f6;
+}
+
+.phrase{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'roboto';
+    letter-spacing: -0.015em;
+    color: #ccd6f6;
+    margin: 60px 0;
+}
+
+.emphasis{
+    color: #edf0fa;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.aboutBtn{
+    width: 100%;
+    background: transparent;
+    color: rgb(37, 223, 207);
+    /* border: 1px solid rgb(37, 223, 207, 0.5); */
+    border-left: none;
+    border-right: none;
+    outline: none;
+    text-transform: capitalize;
+    height: 60px;
+    font-size: large;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+}
+
+.aboutBtn:hover{
+    background-color: rgba(37, 223, 207,0.2);
+}
+
+.underLine{
+    position: absolute;
+    left: 45%;
+    background-color: rgb(37, 223, 207);
+    height: 2px;
+    width: 120px;
+}
+
+.start{
+    background-color: rgba(17,34,64,255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25px;
+    margin-top: 100px;
+}
+
+.contentBlock{
+    width: 400px;
+    min-height: 200px;
+    height: fit-content;
+    background-color: rgba(17,34,64,255);
+    margin-left: 60px;
+    margin-top: -90px;
+    border-radius: 5px;
+    padding-left: 20px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.contentBlockEven{
+    width: 400px;
+    min-height: 200px;
+    height: fit-content;
+    background-color: rgba(17,34,64,255);
+    margin-left: -480px;
+    margin-top: -90px;
+    border-radius: 5px;
+    padding-left: 20px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.rightTriangle{
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+      
+    border-right: 20px solid rgba(17,34,64,255);
+
+    margin: 2rem;
+}
+
+.rightTriangleEven{
+    position: absolute;
+    top: -30px;
+    left: -95px;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+      
+    border-left: 20px solid rgba(17,34,64,255);
+
+    margin: 2rem;
+}
+
+
+.contentH1{
+    color: #ccd6f6;
+    font-size: larger;
+    text-transform: capitalize;
+}
+
+.contentH2{
+    color: rgb(37, 223, 207);
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.contentP{
+    color: #8892b0;
+    font-size: small;
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.block{
+    position: relative;
+    margin-bottom: 150px;
+}
+
+
+
+/* .aboutContent{
     width: 40%;
     padding-left: 5%;
-    background-color: rgb(13, 27, 33);
+    background-color: transparent;
     padding-top: 40px;
     color: rgba(255, 255, 255, 0.4);
 }
@@ -44,7 +228,7 @@
 }
 
 .blur{
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/src/Assets/images/pexels-spencer-selover-428333-removebg.png);
+    background-image:url(/src/Assets/images/pexels-spencer-selover-428333-removebg.png);
     background-position: center;
     background-size: cover;
     width: 60%;
@@ -77,4 +261,4 @@
     height: 30px;
     border-radius: 10px;
     margin-top: 20px;
-}
+} */

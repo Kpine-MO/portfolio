@@ -1,0 +1,140 @@
+.skillsContainer{
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+}
+
+.skillsLayer1{
+    display: flex;
+    width: 75%;
+    margin: 20px auto;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.developmentCells{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.development{
+    margin-right: 30px;
+}
+
+.cells{
+    background-color: transparent;
+    border: 1px solid #8892b0;
+    color: #ccd6f6;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: small;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+
+.skillsFlex{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+
+.projectsDoneCells{
+    display: flex;
+    justify-content: space-between;
+    color: #8892b0;
+    width: 250px;
+}
+
+.skillsH3{
+    color: #ccd6f6;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 40px;
+}
+
+.skillsFlex ul{
+    list-style: none;
+    color: #ccd6f6;
+    margin-top: -20px;
+    line-height: 1.5em;
+}
+
+.skillsUnderLine{
+    width: 115px;
+    border-radius: 10px;
+    height: 3px;
+    background-color: rgb(37, 223, 207);
+    position: absolute;
+    left: 130px;
+    margin-top: -30px;
+}
+
+
+.pDCells a {
+    color: #ccd6f6;
+    transition: color 1s;
+}
+
+.pDCells a:hover{
+    color: rgb(37, 223, 207);
+}
+
+.skillsFlex ul li:before {
+    content: '✓';
+}
+
+.skillsFlex li {
+    margin-left: -50px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.skillsMain{
+    color: #ccd6f6;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 55px;
+    margin-left: 130px;
+    margin-bottom: 60px;
+    font-family: serif;
+}
+
+.skillsIcon{
+    color: #8892b0;
+    position: absolute;
+}
+
+.pDCells{
+    cursor: pointer;
+}
+
+
+.settingsIcon{
+    margin-top: 25px;
+    margin-left: -35px;
+}
+
+.projectsIcon{
+    margin-top: 5px;
+    margin-left: -30px;
+}
+
+.toolsIcon{
+    margin-top: 30px;
+    margin-left: -30px;
+}
+
+.bulbIcon{
+    margin-top: 20px;
+    margin-left: -35px;
+}
