@@ -9,6 +9,7 @@ import Ruby from "../Components/Ruby/Ruby";
 import JavaS from "../Components/JavaScript/JavaS";
 import Html from "../Components/HtmlFolder/Html";
 import Cascading from "../Components/Cascading/Cascading";
+import Hero from "../Components/Hero/Hero";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
         <Routes>
           <Route exact path='/home' element={<Home/>}/>
+          <Route exact path='/hero' element={<Hero/>}/>
           <Route exact path="/ps" element={<Ps/>}/>
           <Route exact path="/react" element={<React/>}/>
           <Route exact path="/ruby" element={<Ruby/>}/>

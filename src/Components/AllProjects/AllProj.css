@@ -1,0 +1,106 @@
+.allProjContainer{
+    background-color: rgba(10,25,47,255);
+    width: 100%;
+    height: fit-content;
+    max-height: 150vh;
+    padding-top: 0px;
+}
+
+.card{
+    width: 280px;
+    height: 280px;
+    background-color: rgba(17,34,64,255);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: margin-top 0.55s;
+}
+
+.card:hover{
+    margin-top: -5px;
+}
+
+.card:hover .allProjName{
+    color: rgb(37, 223, 207);
+}
+
+.allProjHolder{
+    display: flex;
+    flex-wrap: wrap;
+    width: 77%;
+    margin: 0px auto;
+    height: fit-content;
+    gap: 10px;
+}
+
+.cardTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardTopRight{
+    margin-top: -30px;
+}
+
+.cardTopLeft{
+    color: rgb(37, 223, 207);
+}
+
+.allProjName{
+    color: #ccd6f6;
+    text-transform: capitalize;
+    transition: color 1s;
+}
+.allProjDescription{
+    color: #8892b0;
+    font-size: 14px;
+}
+
+.allProjBtn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contactLinkBtn{
+    margin-top: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-bottom: 50px;
+}
+
+.contactLinkBtn:hover{
+    background-color: rgba(30, 72, 84, 0.5);
+}
+
+.allProjH1{
+    color: #ccd6f6;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+
+.techUsed{
+    font-size: medium;
+    color: #8892b0;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 25px;
+    word-spacing: 20px;
+}
+
+.allProjHeader{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 120px;
+}
+
+.pFlex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: rgb(37, 223, 207);
+    font-family: 'Courier New', Courier, monospace;
+
+}
