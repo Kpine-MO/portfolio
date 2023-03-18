@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <div className="heroContainer">
+      <div className="holder">
       <div className="decore"></div>
       <div className="leftContent">
         <h4>Hi, my name is</h4>
@@ -20,7 +21,7 @@ function Hero() {
           but 10 times its size and so on.But now it doesn't seem to work.
           Please fix this as this feature was quite handy.
         </p>
-        <a href="https://drive.google.com/file/d/1SLmSVMKkRnh1P4eiRpMx4GlerexgbUg7/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1SLmSVMKkRnh1P4eiRpMx4GlerexgbUg7/view?usp=sharing/" target="_blank">
         <button className="heroBtn">explore CV</button>
         </a>
         <div className="socialLinks">
@@ -55,6 +56,7 @@ function Hero() {
        <div className="heroAbsolute html"><SiHtml5 size={80}/></div> */}
       </div>
       {/* <div className="rightContent"></div> */}
+      </div>
     </div>
   );
 }

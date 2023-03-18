@@ -20,7 +20,8 @@ function About() {
           </p>
         </div>
         <div className="arrow">
-          <div className="tree">
+         <div className="arrowRelative">
+         <div className="tree">
             <div className="block">
               <div className="start">
                 <GiGraduateCap size={25} />
@@ -107,6 +108,7 @@ function About() {
             </div>
           </div>
           <div className="triangle"></div>
+         </div>
         </div>
       </div>
       <button className="aboutBtn">view resume</button>

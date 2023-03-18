@@ -12,9 +12,12 @@ function AllProj() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/react")
+    fetch("http://127.0.0.1:5500/Data/db.json")
       .then((res) => res.json())
-      .then((data) => setProjects(data));
+      .then((data) => {
+        
+        setProjects(data.React)
+    });
   }, []);
   return (
     <div className="allProjContainer">

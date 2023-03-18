@@ -2,14 +2,16 @@
     width: 100%;
     margin: 0;
     height: 240vh;
-    background-image:linear-gradient( rgba(17,34,64,0.4), rgba(17,34,64,0.4)), url(/src/Assets/images/experience-lg.jpg);
+    /* background-image:linear-gradient( rgba(17,34,64,0.4), rgba(17,34,64,0.4)), url(/src/Assets/images/experience-lg.jpg); */
     background-position: center;
+    background-color: rgba(12,116,159,255);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     margin-top: -22px;
     position: relative;
 }
+
 
 /* .headerWrap{
     background-color: rgba(17,34,64,);
@@ -24,15 +26,23 @@
 .tree{
     width: 2px;
     background-color:  rgb(37, 223, 207);
-    height: 1300px;
+    height: fit-content;
     position: absolute;
     left: 50%;
+    right: 50%;
+    bottom: 0px;
+  
 }
+
+/* .arrow{
+    margin-top: 280px;
+    bottom: 0;
+} */
 
 .triangle{
     position: absolute;
-    left: 46.96%;
-    bottom: 85px;
+    left: 50%;
+    bottom: 65px;
     width: 0; 
     height: 0; 
     border-left: 8px solid transparent;
@@ -40,8 +50,15 @@
       
     border-top: 16px solid rgb(37, 223, 207);
 
-    margin: 2rem;
 }
+/* .triangleHolder{
+    border: 1px solid red;
+    height: fit-content;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+} */
 
 .experienceTitle{
     font-family: serif;
