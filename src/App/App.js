@@ -18,7 +18,7 @@ function App() {
         <Nav />
 
         <Routes>
-          <Route exact path='/home' element={<Home/>}/>
+          <Route exact path='/' element={<Home/>}/>
           <Route exact path='/hero' element={<Hero/>}/>
           <Route exact path="/ps" element={<Ps/>}/>
           <Route exact path="/react" element={<React/>}/>
