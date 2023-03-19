@@ -14,7 +14,7 @@ import Hero from "../Components/Hero/Hero";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="portfolio" >
         <Nav />
 
         <Routes>
