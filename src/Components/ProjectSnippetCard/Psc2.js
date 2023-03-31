@@ -16,7 +16,7 @@ function Psc2({ name, imgUrl, descript, technologies, github }) {
           <p className="aboutProject2">{descript}</p>
           <p className="technology2">{technologies}</p>
           <div className="techIcons2">
-            <a href={github}>
+            <a href={github} target="_blank">
               <FiGithub className="techIconOne2" size={20} />
             </a>
             <FiExternalLink className="techIconTwo2" size={20} />

@@ -19,11 +19,10 @@
 }
 
 .logo{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
 }
 
 #ulNavLinks a:hover{
-    border-bottom: 1px solid rgb(37, 223, 207);
     color: #8892b0;
 }
 
@@ -37,16 +36,34 @@
 }
 
 #ulNavLinks a{
-    list-style: none;
     padding-bottom: 5px;
     border: 2px solid transparent;
     transition: 1s;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    font-weight: 500;
+    font-weight: lighter;
+    font-family: Courier; 
+    font-size: 14px; 
+    font-style: normal; 
     text-decoration: none;
-    color: rgb(37, 223, 207);
+    color: #ccd6f6;
+    margin-right: 10px;
 }
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+  }
+  
+  ol li {
+    counter-increment: my-awesome-counter;
+  }
+  
+  ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: rgba(100,255,218,255);
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+  }
 
 .navLinks{
     margin-right: 50px;

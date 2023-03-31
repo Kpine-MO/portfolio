@@ -12,7 +12,7 @@ function AllProj() {
   };
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5500/Data/db.json")
+    fetch("https://kpine-mo.github.io/Data/db.json")
       .then((res) => res.json())
       .then((data) => {
         
@@ -21,13 +21,14 @@ function AllProj() {
   }, []);
   return (
     <div className="allProjContainer">
+      <div className="center">
       <div className="allProjHeader">
         <div>
         <h1 className="allProjH1">Noteworthy Projects</h1>
         <p className="pFlex">view my archive</p>
         </div>
       </div>
-      <div className="allProjHolder">
+      <div className="child">
         {projects.slice(0, visible).map((item, i) => {
           return (
             <div className="card" key={i}>
@@ -36,7 +37,7 @@ function AllProj() {
                   <CiFolderOn size={50} />
                 </div>
                 <div className="techIcons cardTopRight">
-                  <a href={item.github}>
+                  <a href={item.github} target="_blank">
                     <FiGithub className="techIconOne" size={18} />
                   </a>
                   <FiExternalLink className="techIconTwo" size={18} />
@@ -53,6 +54,7 @@ function AllProj() {
         <button className="contactLink contactLinkBtn" onClick={showMoreItems}>
           show more
         </button>
+      </div>
       </div>
     </div>
   );

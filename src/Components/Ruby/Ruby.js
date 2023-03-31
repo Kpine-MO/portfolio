@@ -8,7 +8,7 @@ function Ruby() {
     const [allProjects, setAllProjects] = useState([])
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5500/Data/db.json")
+        fetch("https://kpine-mo.github.io/Data/db.json")
         .then((res) => res.json())
         .then((data)=> setAllProjects(data.React))
     },[])

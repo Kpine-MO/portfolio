@@ -1,11 +1,13 @@
 .heroContainer{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background-color:rgba(10,25,47,255);
+    margin-bottom: 220px;
+    overflow: hidden;
 }
 
 .holder{
-    width: 1100px;
+    width: 90%;
     display: flex;
     justify-content: center;
 }
@@ -27,7 +29,7 @@
 } */
 
 .leftContent{
-    margin-top: 120px;
+    margin-top: 60px;
     color: lightgray;
     font-family: montserrat;
     width: fit-content;
@@ -40,8 +42,10 @@
    margin-top: -20px;
    text-transform: uppercase;
    font-size: 60px;
-   /* color: #ccd6f6; */
-   font-family: sans-serif;
+   color: #ccd6f6;
+   font-family: 'Open Sans', sans-serif;
+   transform: scaleY(1.2);
+   font-weight: bolder;
 }
 
 .fade{
@@ -49,10 +53,13 @@
     color: #8892b0;
     font-weight: bolder;
     width: 100%;
-    margin-top: -30px;
+    margin-top: -20px;
     text-transform: uppercase;
     font-size: 60px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+   transform: scaleY(1.2);
+   font-weight: bolder;
+    margin-bottom: 0;
 }
 
 .leftContent h4{
@@ -60,16 +67,17 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
     word-spacing: 0.4em;
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
     margin-bottom: 50px;
 }
 
-.leftContent p{
-    font-size: 15.5px;
-    font-family: sans-serif;
-    font-weight: 400;
-    width: 500px;
+.bigParagraph{
+    font-size: 16px;
+    font-family: Open Sans;
+    font-weight: lighter;
+    width: 750px;
     color: #8892b0;
+    line-height: 1.5em;
 }
 
 .heroBtn{
@@ -81,11 +89,11 @@
     text-transform: capitalize;
     font-weight: lighter;
     font-family: sans-serif;
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
     font-size: 0.89em;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid rgb(37, 223, 207);
+    border: 1px solid rgba(100,255,218,255);
     transition: background-color 0.5s;
 }
 
@@ -151,16 +159,22 @@
     color: rgb(35, 118, 151);
 }
 
+.socialLinksContainer{
+    width: 100%;
+    overflow: hidden;
+}
+
 .socialLinks{
     color: #8892b0;
-    width: 110px;
+    display: flex;
     margin-top: 70px;
     cursor: pointer;
-    position: absolute;
-    left: 70px;
+    left: 60px;
     bottom: 140px;
     position: fixed;
-    z-index: 200;
+    z-index: 100;
+    margin-left: 20px;
+    width: fit-content;
 }
 
 .ancor{
@@ -186,6 +200,7 @@
     position: fixed;
     right: -20px;
     font-weight: lighter;
+    bottom: 140px;
     color: #8892b0;
     height: fit-content;
     font-size: small;
@@ -205,7 +220,7 @@
 }
 
 .web:hover{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
 }
 
 .socialLinksSingle{
@@ -215,7 +230,7 @@
 }
 
 .socialLinksSingle:hover{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
     transform: scale(1.1);
 }
 

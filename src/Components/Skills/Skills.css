@@ -1,20 +1,19 @@
-.skillsContainer{
-    width: 100%;
-    height: 100vh;
-    padding-top: 60px;
+.skillz{
+    height: fit-content;
 }
 
-.skillsLayer1{
+.skillsLayer1 {
     display: flex;
-    width: 75%;
-    margin: 20px auto;
-    height: fit-content;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 80px;
+
 }
 
 .developmentCells{
     display: grid;
     grid-template-columns: auto auto auto;
+    margin-right: 150px;
 }
 
 .development{
@@ -54,7 +53,7 @@
 }
 
 .skillsH3{
-    color: #ccd6f6;
+    color: #8892b0;
     text-transform: capitalize;
     font-weight: bold;
     font-size: x-large;
@@ -72,10 +71,10 @@
     width: 115px;
     border-radius: 10px;
     height: 3px;
-    background-color: rgb(37, 223, 207);
+    background-color: rgba(100,255,218,255);
     position: absolute;
-    left: 130px;
-    margin-top: -30px;
+    left: 140px;
+    margin-top: -55px;
 }
 
 
@@ -85,11 +84,11 @@
 }
 
 .pDCells a:hover{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
 }
 
 .skillsFlex ul li:before {
-    content: '✓';
+    content: '✓    ';
 }
 
 .skillsFlex li {
@@ -101,12 +100,25 @@
 
 .skillsMain{
     color: #ccd6f6;
+    font-size: xx-large;
     text-transform: capitalize;
-    font-weight: bolder;
-    font-size: 55px;
-    margin-left: 130px;
-    margin-bottom: 60px;
-    font-family: serif;
+    font-family: Open Sans;
+    position: absolute;
+    left: 150px;
+    margin-top: -100px;
+    width: fit-content;
+}
+
+.spanStyleSkills{
+   margin-left: 250px;
+   margin-top: -75px;
+}
+
+.styleDiv{
+    width: 500px;
+    left: 0;
+    position: absolute;
+    
 }
 
 .skillsIcon{

@@ -10,12 +10,12 @@ function Nav() {
           <h2>LOGO</h2>
         </div>
         <div className="navLinks">
-          <ul id="ulNavLinks">
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/ps"><li>Show Case</li></Link>
-            <Link><li>About</li></Link>
-            <Link><li>Contacts</li></Link>
-          </ul>
+          <ol id="ulNavLinks">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/allProj">Show Case</Link></li> 
+            <li><Link to="/skills">About</Link></li>
+            <li><Link to="/contact">Contacts</Link></li>
+          </ol>
         </div>
       </div>
     </div>

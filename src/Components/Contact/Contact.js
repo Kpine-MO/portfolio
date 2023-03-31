@@ -7,8 +7,11 @@ function Contact() {
   return (
     <div className="contactContainer">
       <div className="contactHolder">
-        <h5 className="contactH5">like what u see ?</h5>
-        <h1 className="contactH1">reach out</h1>
+        <div className="flex contactFlex">
+          <h2 className="numbers contactNumber">3.</h2>
+          <h5 className="contactH5">like what u see ?</h5>
+        </div>
+        <h1 className="contactH1">reach out !</h1>
         <p className="contactP">
           I am always looking for opportunities amongst forward driven
           individuals which pretty much leaves my inbox always open to anyone
@@ -17,12 +20,12 @@ function Contact() {
         </p>
         <a
           className="contactLink"
-          href="https://mail.google.com/mail/u/0/?to=cpine0223@gmail.com&fs=1&tf=cm"
+          href="https://mail.google.com/mail/u/0/?to=cpine0223@gmail.com&fs=1&tf=cm" target="_blank"
         >
           down below
         </a>
 
-        <a href="https://github.com/Kpine-MO?tab=repositories">
+        <a href="https://github.com/Kpine-MO?tab=repositories" target="_blank">
         <div className="contactBy">
             <p>Designed & built by Chrispine Ochieng</p>
             <div className="contactWith">

@@ -1,281 +1,203 @@
-.aboutContainer{
+
+
+.summaryMe{
+    width: 480px;
+}
+
+.aboutMeHolder{
+    width: 90%;
+}
+
+.aboutMeContainer{
     width: 100%;
-    margin: 0;
-    height: 240vh;
-    /* background-image:linear-gradient( rgba(17,34,64,0.4), rgba(17,34,64,0.4)), url(/src/Assets/images/experience-lg.jpg); */
-    background-position: center;
-    background-color: rgba(12,116,159,255);
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: fit-content;
+    margin-bottom: 400px;
+}
+
+.aboutProfile{
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+.aboutImg{
+   margin-left: 100px;
+   margin-top: 20px;
+   position: relative;
+   z-index: 20;
+   text-align: center;
+}
+
+.imgBorder{
+    width: 270px;
+    height: 290px;
+    border-radius: 5px;
+    border: 1px solid rgba(100,255,218,255);
+    position: absolute;
+    left: 755px;
+    margin-top: 40px;
+}
+
+.aboutMeFlex{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.spanStyle{
+    height: 1px;
+    width: 400px; 
+    background-color: rgba(255,255,255,.1);
+    position: absolute;
+    margin-top: 106px;
     text-align: center;
-    margin-top: -22px;
+}
+
+.spanStyleAbout{
+   left: 170px;
+   top: -50px;
+}
+
+.topAbout{
+    margin-bottom: 40px;
     position: relative;
 }
 
-
-/* .headerWrap{
-    background-color: rgba(17,34,64,);
-} */
-
-.aboutHolder{
-    width: 70%;
-    margin: 0px auto;
-    padding-top: 50px;
-}
-
-.tree{
-    width: 2px;
-    background-color:  rgb(37, 223, 207);
-    height: fit-content;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    bottom: 0px;
-  
-}
-
-/* .arrow{
-    margin-top: 280px;
-    bottom: 0;
-} */
-
-.triangle{
-    position: absolute;
-    left: 50%;
-    bottom: 65px;
-    width: 0; 
-    height: 0; 
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-      
-    border-top: 16px solid rgb(37, 223, 207);
-
-}
-/* .triangleHolder{
-    border: 1px solid red;
-    height: fit-content;
-    color: red;
-    width: 100%;
+.flex{
     display: flex;
-    justify-content: left;
-} */
-
-.experienceTitle{
-    font-family: serif;
-    text-transform: capitalize;
-    font-size: 40px;
-    font-weight: bolder;
-    color: #ccd6f6;
 }
 
-.phrase{
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'roboto';
-    letter-spacing: -0.015em;
-    color: #ccd6f6;
-    margin: 60px 0;
-}
-
-.emphasis{
-    color: #edf0fa;
-    cursor: pointer;
-    font-weight: bolder;
-}
-
-.aboutBtn{
-    width: 100%;
-    background: transparent;
-    color: rgb(37, 223, 207);
-    /* border: 1px solid rgb(37, 223, 207, 0.5); */
-    border-left: none;
-    border-right: none;
-    outline: none;
-    text-transform: capitalize;
-    height: 60px;
-    font-size: large;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-top: 50px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    border: none;
-}
-
-.aboutBtn:hover{
-    background-color: rgba(37, 223, 207,0.2);
-}
-
-.underLine{
-    position: absolute;
-    left: 45%;
-    background-color: rgb(37, 223, 207);
-    height: 2px;
-    width: 120px;
-}
-
-.start{
-    background-color: rgba(17,34,64,255);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -25px;
-    margin-top: 100px;
-}
-
-.contentBlock{
-    width: 400px;
-    min-height: 200px;
-    height: fit-content;
-    background-color: rgba(17,34,64,255);
-    margin-left: 60px;
-    margin-top: -90px;
-    border-radius: 5px;
-    padding-left: 20px;
-    text-align: left;
-    padding-top: 10px;
-}
-
-.contentBlockEven{
-    width: 400px;
-    min-height: 200px;
-    height: fit-content;
-    background-color: rgba(17,34,64,255);
-    margin-left: -480px;
-    margin-top: -90px;
-    border-radius: 5px;
-    padding-left: 20px;
-    text-align: left;
-    padding-top: 10px;
-}
-
-.rightTriangle{
-    position: absolute;
-    top: -30px;
-    left: 10px;
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-      
-    border-right: 20px solid rgba(17,34,64,255);
-
-    margin: 2rem;
-}
-
-.rightTriangleEven{
-    position: absolute;
-    top: -30px;
-    left: -95px;
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-      
-    border-left: 20px solid rgba(17,34,64,255);
-
-    margin: 2rem;
-}
-
-
-.contentH1{
-    color: #ccd6f6;
-    font-size: larger;
-    text-transform: capitalize;
-}
-
-.contentH2{
-    color: rgb(37, 223, 207);
-    font-size: medium;
-    text-transform: capitalize;
-}
-
-.contentP{
+.flexParagraph{
     color: #8892b0;
     font-size: small;
-    margin-top: 20px;
-    line-height: 1.5em;
+    margin: -2px 10px;
+    margin-bottom: 12px;
+    margin-right: 50px;
 }
 
-.block{
-    position: relative;
-    margin-bottom: 150px;
-}
-
-
-
-/* .aboutContent{
-    width: 40%;
-    padding-left: 5%;
-    background-color: transparent;
-    padding-top: 40px;
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.aboutIcons{
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 300px;
-    width: 100%;
-}
-
-.title{
-    text-transform: uppercase;
-}
-
-.data{
-    font-size: small;
-    list-style: none;
-    margin-left: -50px;
-}
-
-.aboutRight{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    padding-top: 25px;
-    width: 50%;
-    right: 40px;
-    text-align: center;
-}
-
-.blur{
-    background-image:url(/src/Assets/images/pexels-spencer-selover-428333-removebg.png);
-    background-position: center;
-    background-size: cover;
-    width: 60%;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
-
-.aboutIcons{
-    margin: 0;
-    border-radius: 10px;
+.flexMore{
+    margin-top: 40px;
     margin-left: 20px;
-    color: rgba(255, 255, 255, 0.7);;
-    padding-top: 20px;
 }
 
-.aboutH{
+.aboutMe{
+    margin-bottom: 260px;
+}
+
+.tabs{
+   width: 80%;
+   margin: 80px auto;
+   position: absolute;
+   height: fit-content;
+   margin-top: -100px;
+   left: 25%;
+}
+
+.education{
+    font-size: xx-large;
+    font-family: Open Sans;
+    color: #ccd6f6;
     text-transform: capitalize;
-    font-family: montserrat;
+    position: absolute;
+    margin-top: -46px;
 }
 
-.aboutP{
-    font-family: montserrat;
-    font-size: small;
+.spanStylePanel{
+    right: -215px;
+    margin-top: -22px;
 }
 
-.aboutBtn{
-    background-color: rgba(255, 255, 255, 0.4);
-    border: none;
-    width: 120px;
-    height: 30px;
-    border-radius: 10px;
+.reactTabs{
+    display: flex;
+    width: 100%;
     margin-top: 20px;
+    margin-left: -60px;
+}
+
+.tabContent{
+    margin-left: 40px;
+    scroll-behavior: smooth;
+}
+
+.tabList{
+    cursor: pointer;
+    list-style: none;
+    color: #8892b0;
+    font-size: 15px;
+    padding: 15px 0;
+    margin: 0;
+    height: fit-content;
+    margin-left: -41px;
+    padding-left: 20px;
+    border-left: 2px solid rgba(136, 146, 176, .2);
+    transform: all 1s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;
+    outline: none;
+    width: 120px;
+}
+
+.tabList:hover{
+    color: rgba(100,255,218,255);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tabList:focus{
+    border-left: 2px solid rgba(100,255,218,255);
+    color: rgba(100,255,218,255);
+}
+
+/* .list{
+    border-left: 2px solid rgba(136, 146, 176, .2);
 } */
+
+.panelHeader{
+    color: #ccd6f6;
+    font-family: Open Sans;
+    font-size: larger;
+}
+
+.panelDate{
+    color: #8892b0;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.panelExperience{
+    color: #8892b0;
+    font-size: medium;
+    justify-content: center;
+    width: 55%;
+    margin-left: 0;
+    line-height: 24px;
+}
+
+.panelBold{
+    color: rgba(100,255,218,255);
+    margin: 0px 5px;
+    height: fit-content;
+}
+
+.panelIcon{
+    margin-top: 13px;
+    margin-right: 5px;
+}
+
+.numbers{
+    margin-top: 40px;
+    color: rgba(100,255,218,255);
+    font-size: xx-large;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.tabNumber{
+    margin-top: -35px;
+    margin-left: -65px;
+    color: rgba(100,255,218,255);
+    font-family: 'Courier New', Courier, monospace;
+}

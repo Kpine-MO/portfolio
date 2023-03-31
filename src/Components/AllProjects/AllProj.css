@@ -1,8 +1,12 @@
 .allProjContainer{
-    background-color: rgba(12,116,159,255);
-    width: 100%;
+    /* background-color: rgba(12,116,159,255); */
+    background-color: rgba(10,25,47,255);
+    width: 90%;
     height: fit-content;
     padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .card{
@@ -20,16 +24,26 @@
 }
 
 .card:hover .allProjName{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
 }
 
 .allProjHolder{
+    width: 100%;
+    margin: 0px auto;
+    height: fit-content;
+    position: relative;
+    height: fit-content;
+}
+
+
+.child{
     display: flex;
     flex-wrap: wrap;
-    width: 77%;
+    width: 100%;
     margin: 0px auto;
     height: fit-content;
     gap: 10px;
+    justify-content: center;
 }
 
 .cardTop{
@@ -42,17 +56,20 @@
 }
 
 .cardTopLeft{
-    color: rgb(37, 223, 207);
+    color: rgba(100,255,218,255);
 }
 
 .allProjName{
     color: #ccd6f6;
     text-transform: capitalize;
     transition: color 1s;
+    font-family: Open Sans;
 }
 .allProjDescription{
     color: #8892b0;
-    font-size: 14px;
+    font-size: small;
+    font-family: Open Sans;
+    margin-bottom: 0;
 }
 
 .allProjBtn{
@@ -77,13 +94,14 @@
     color: #ccd6f6;
     font-size: xx-large;
     text-transform: capitalize;
+    font-family: Open Sans;
 }
 
 .techUsed{
     font-size: medium;
     color: #8892b0;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 25px;
+    margin-top: 15px;
     word-spacing: 20px;
 }
 
@@ -99,7 +117,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    color: rgb(37, 223, 207);
-    font-family: 'Courier New', Courier, monospace;
-
+    color: rgba(100,255,218,255);
+    font-family: Courier; 
+    font-size: small; 
+    font-style: normal; 
 }
