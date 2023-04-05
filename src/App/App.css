@@ -6,7 +6,10 @@
     height: fit-content;
     scroll-behavior: smooth;
     background-color: rgba(10,25,47,255);
+    overflow: hidden;
+    position: relative;
 }
+
 
 
 

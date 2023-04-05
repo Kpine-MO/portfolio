@@ -26,11 +26,13 @@ function About() {
               </div>
               <div className="topAbout">
                 <h3 className="allProjH1">About Me</h3>
-                <div className="spanStyle spanStyleAbout"><BsPlay/></div>
+                <div className="spanStyle spanStyleAbout">
+                  <BsPlay />
+                </div>
               </div>
             </div>
             <div className="aboutMeFlex">
-              <div>
+              <div className="aboutLeftCont">
                 <p className="summaryMe bigParagraph">
                   Hello! My name is Brittany and I enjoy creating things that
                   live on the internet. My interest in web development started
@@ -40,13 +42,13 @@ function About() {
                   <br />
                   <br />
                   Fast-forward to today, and I’ve had the privilege of working
-                  at an advertising agency, a start-up, a huge corporation, and
-                  a student-led design studio. My main focus these days is
+                  at an <b className="panelBold">advertising agency</b>,<b className="panelBold">a start-up </b>, <b className="panelBold">a huge corporation</b>, and
+                  <b className="panelBold">a student-led design studio</b>. My main focus these days is
                   building accessible, inclusive products and digital
-                  experiences at Upstatement for a variety of clients.
+                  experiences at <b className="panelBold">Upstatement</b>  for a variety of clients.
                   <br />
                   <br />
-                  I also recently launched a course that covers everything you
+                  I also recently <b className="panelBold">launched a course</b> that covers everything you
                   need to build a web app with the Spotify API using Node &
                   React.
                   <br />
@@ -97,10 +99,12 @@ function About() {
                     width: "270px",
                     height: "290px",
                     borderRadius: "5px",
+                    position: "relative",
+                    zIndex: "10"
                   }}
                 />
+                <div className="imgBorder"></div>{" "}
               </div>
-              <div className="imgBorder"></div>{" "}
             </div>
           </div>
 
@@ -111,7 +115,7 @@ function About() {
           >
             <div className="flex">
               <h2 className="tabNumber">1.1.</h2>
-              <div className="styleDiv">
+              <div className="styleDiv pull">
                 <h3 className="education ">education & skills</h3>
                 <div className="spanStyle spanStylePanel"></div>
               </div>

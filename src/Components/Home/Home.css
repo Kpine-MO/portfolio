@@ -7,15 +7,15 @@
 .sidePushMenu{
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 70px;
     border: 1px solid rgba(10,25,47,255);
     bottom: 0;
     height: 100vh;
     width: 350px;
     background-color: white;
-    color: #ccd6f6;
+    color: rgba(10,25,47);
     z-index: 200;
-    background-color: rgb(5, 94, 86);
+    background-color: rgb(193, 193, 193);
     position: fixed;
     font-family: Open Sans;
     transform: translate(100%);
@@ -79,14 +79,36 @@
     height:fit-content;
     border: none;
     outline: none;
-    background-color: rgba(10,25,47,255);
-    color: rgb(5, 94, 86);
+    border: 1px solid rgba(10,25,47,255);
+    color: rgba(10,25,47,255);
+    border: transparent;
     border-radius: 5px;
+    cursor: pointer;
     margin: 5px;
 }
 
 #hide {
     transform: translateX(0%);
+}
+
+.showMenuBtn{
+    color: rgba(100,255,218,255);
+    background-color: transparent;
+    width: 90px;
+    height: 45px;
+    border: 1px solid rgba(100,255,218,255);
+    outline: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: small;
+    font-family: Open Sans;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top:15px;
+    z-index: 100;
+    position: fixed;
+    padding: 10px;
 }
    
   

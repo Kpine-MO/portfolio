@@ -20,7 +20,7 @@ function AllProj() {
     });
   }, []);
   return (
-    <div className="allProjContainer">
+    <div className="allProjContainer hideOverflow">
       <div className="center">
       <div className="allProjHeader">
         <div>
@@ -28,7 +28,7 @@ function AllProj() {
         <p className="pFlex">view my archive</p>
         </div>
       </div>
-      <div className="child">
+      <div className="child hideOverflow">
         {projects.slice(0, visible).map((item, i) => {
           return (
             <div className="card" key={i}>

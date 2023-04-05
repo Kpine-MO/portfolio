@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="heroContainer">
-      <div className="holder">
+    <div className="heroContainer hideOverflow">
+      <div className="holder hideOverflow">
         <div className="decore"></div>
-        <div className="leftContent">
+        <div className="leftContent hideOverflow">
           <h4>Hi, my name is</h4>
           <h1 className="bright">Chrispine Ochieng.</h1>
           <h1 className="fade">i build web applications.</h1>

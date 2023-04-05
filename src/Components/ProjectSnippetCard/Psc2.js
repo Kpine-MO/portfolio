@@ -8,7 +8,7 @@ function Psc2({ name, imgUrl, descript, technologies, github }) {
     <div className="Psc2">
       <div className="projectDetails2">
         <div className="projectImg-gradient2">
-          <img src={imgUrl} className="projectImg2" />
+          <img src={imgUrl} alt={name} className="projectImg2" />
         </div>
         <div className="aboutProjectContainer2">
           <h3 className="feature2">featured project</h3>

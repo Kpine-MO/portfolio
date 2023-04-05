@@ -15,10 +15,10 @@ function Home() {
 
 
   return (
-    <div className='home'>
-      <button  onClick={() => setShowMenu(!showMenu)}></button>
+    <div className='home hideOverflow'>
+      <button className='showMenuBtn' onClick={() => setShowMenu(!showMenu)}>categories</button>
       {
-        showMenu ? <div id='hide' className='sidePushMenu'>
+        showMenu ? <div id='hide' className='sidePushMenu hideOverflow'>
         <div className='homeHeaderContent'>
           <button className='closeBtn' onClick={() => setShowMenu(!showMenu)}>X</button>
           <h4 className='homeHeader'>Project Categories</h4>
@@ -37,7 +37,7 @@ function Home() {
           <li>ShowCase</li>
           <li>Contact</li>
          </ul> */}
-      </div> : <div  className='sidePushMenu' >
+      </div> : <div  className='sidePushMenu hideOverflow' >
       <button className='closeBtn' onClick={() => setShowMenu(!showMenu)}>X</button>
         <h4 className='homeHeader'>Project Categories</h4>
          <ul>

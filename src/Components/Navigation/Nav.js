@@ -1,13 +1,16 @@
 import React from "react";
+import { TbHexagon } from "react-icons/tb"
 import { Link } from "react-router-dom";
 import "./Nav.css"
 
 function Nav() {
   return (
-    <div className="navContainer">
-      <div className="flexContainer">
+    <div className="navContainer hideOverflow">
+      <div className="flexContainer hideOverflow">
         <div className="logo">
-          <h2>LOGO</h2>
+        <div class="hexagon">
+          <h6 className="logoH6">CO</h6>
+        </div>
         </div>
         <div className="navLinks">
           <ol id="ulNavLinks">

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
 
 }
 
@@ -110,16 +110,17 @@
 }
 
 .spanStyleSkills{
-   margin-left: 250px;
+   margin-left: 550px;
    margin-top: -75px;
 }
 
 .styleDiv{
     width: 500px;
-    left: 0;
+    left: 20px;
     position: absolute;
-    
 }
+
+
 
 .skillsIcon{
     color: #8892b0;
@@ -149,4 +150,32 @@
 .bulbIcon{
     margin-top: 20px;
     margin-left: -35px;
+}
+
+.projectDisplay{
+    width: 90%;
+    height: fit-content;
+    max-height: 200vh;
+    margin-top: 0px;
+}
+
+.numbersShowCase{
+    color: rgba(100,255,218,255);
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.Number{
+    position: absolute;
+    top: -118px;
+    left: 105px;
+}
+
+.flex{
+    position: relative;
+}
+
+.pull{
+    margin-left: -20px;
 }

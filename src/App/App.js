@@ -4,7 +4,6 @@ import Nav from "../Components/Navigation/Nav";
 import Home from "../Components/Home/Home";
 import Ps from "../Components/ProjectSnippet/Ps";
 import React from "../Components/React/React";
-import Footer from "../Components/Footer/Footer";
 import Ruby from "../Components/Ruby/Ruby";
 import JavaS from "../Components/JavaScript/JavaS";
 import Html from "../Components/HtmlFolder/Html";

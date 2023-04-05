@@ -2,16 +2,23 @@
 
 .summaryMe{
     width: 480px;
+    line-height: 28px;
 }
 
-.aboutMeHolder{
-    width: 90%;
-}
+/* .aboutMeHolder{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+} */
 
 .aboutMeContainer{
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
     height: fit-content;
     margin-bottom: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 .aboutProfile{
@@ -25,7 +32,10 @@
    position: relative;
    z-index: 20;
    text-align: center;
+   display: flex;
+   height: fit-content;
 }
+
 
 .imgBorder{
     width: 270px;
@@ -33,19 +43,27 @@
     border-radius: 5px;
     border: 1px solid rgba(100,255,218,255);
     position: absolute;
-    left: 755px;
-    margin-top: 40px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    transition: all .2s;
+}
+
+.aboutImg:hover .imgBorder{
+    top: 12px;
+    left: 12px;
 }
 
 .aboutMeFlex{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    
 }
 
 .spanStyle{
     height: 1px;
-    width: 400px; 
+    width: 300px; 
     background-color: rgba(255,255,255,.1);
     position: absolute;
     margin-top: 106px;
@@ -58,12 +76,13 @@
 }
 
 .topAbout{
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     position: relative;
 }
 
 .flex{
     display: flex;
+    margin-bottom: -10px;
 }
 
 .flexParagraph{
@@ -89,27 +108,27 @@
    position: absolute;
    height: fit-content;
    margin-top: -100px;
-   left: 25%;
+   left: 30%;
 }
 
 .education{
-    font-size: xx-large;
+    font-size: x-large;
     font-family: Open Sans;
     color: #ccd6f6;
     text-transform: capitalize;
     position: absolute;
-    margin-top: -46px;
+    margin-top: -40px;
 }
 
 .spanStylePanel{
-    right: -215px;
+    right: -30px;
     margin-top: -22px;
 }
 
 .reactTabs{
     display: flex;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: -60px;
 }
 
@@ -179,6 +198,26 @@
     color: rgba(100,255,218,255);
     margin: 0px 5px;
     height: fit-content;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.panelBold:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(100,255,218,255);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+.panelBold:hover::after{
+    width: 100%;
 }
 
 .panelIcon{
@@ -200,4 +239,8 @@
     margin-left: -65px;
     color: rgba(100,255,218,255);
     font-family: 'Courier New', Courier, monospace;
+}
+
+.hideOverflow{
+    overflow: hidden;
 }

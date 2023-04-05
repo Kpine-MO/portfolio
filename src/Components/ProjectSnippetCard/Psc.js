@@ -18,7 +18,7 @@ function Psc({ name, imgUrl, descript, technologies, github }) {
           </div>
         </div>
         <div className="projectImg-gradient">
-        <img src={imgUrl} className="projectImg"/>
+        <img src={imgUrl} alt={name} className="projectImg"/>
         </div>
         
       </div>

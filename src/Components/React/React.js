@@ -5,20 +5,20 @@ import Psc2 from '../ProjectSnippetCard/Psc2'
 
 function ProjectReact() {
     
-    const [allProjects, setAllProjects] = useState([])
+    const [topProjects, setTopProjects] = useState([])
 
     useEffect(() => {
         fetch("https://kpine-mo.github.io/Data/db.json")
         .then((res) => res.json())
         .then((data)=> {
-          setAllProjects(data.React)
-          console.log()
+          setTopProjects(data.topProjects)
+          console.log(data.topProjects)
         })
     },[])
   return (
     <div>
       {
-        allProjects.map((project,i) => {
+        topProjects.map((project,i) => {
           if(i%2 == 0){
             return <Psc2
             key={i}
