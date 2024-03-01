@@ -22,7 +22,7 @@ function Skills() {
             <h2 className="numbersShowCase">2.</h2>
           </div>
           <div className="styleDiv pull">
-            <h3 className="skillsMain allProjH1 ">Top Of The List Projects</h3>
+            <h3 className="skillsMain allProjH1 ">Top Projects</h3>
             <div className="spanStyle spanStyleSkills"></div>
           </div>
         </div>

@@ -94,7 +94,7 @@ function About() {
               <div className="aboutImg">
                 <img
                   className="aboutProfile"
-                  src="https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://i.postimg.cc/qqv7kwM4/Whats-App-Image-2024-03-01-at-18-00-03.jpg"
                   style={{
                     width: "270px",
                     height: "290px",
@@ -126,8 +126,6 @@ function About() {
                 <Tab className="tabList">Self Taught</Tab>
                 <Tab className="tabList">Moringa School</Tab>
                 <Tab className="tabList">ALX</Tab>
-                <Tab className="tabList">Hard Skills</Tab>
-                <Tab className="tabList">Soft Skills</Tab>
               </TabList>
               <div className="tabContent">
                 <TabPanel>

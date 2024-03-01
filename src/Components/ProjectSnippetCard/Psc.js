@@ -3,13 +3,15 @@ import "./Psc.css";
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { Link } from "react-router-dom";
 
-function Psc({ name, imgUrl, descript, technologies, github }) {
+function Psc({ name, imgUrl, descript, technologies, github, link }) {
   return (
     <div className="Psc">
       <div className="projectDetails">
         <div className="aboutProjectContainer">
           <h3 className="feature">featured project</h3>
-          <h5 className="projectTitle">{name}</h5>
+          <h5 className="projectTitle">
+          <a href={link} target="_blank" style={{color: "white"}}>{name}</a>
+          </h5>
           <p className="aboutProject">{descript}</p>
           <p className="technology">{technologies}</p>
           <div className="techIcons">
