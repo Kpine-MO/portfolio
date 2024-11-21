@@ -36,7 +36,7 @@ function ProjectReact() {
          github: "https://github.com/c4928315/jobFinder",
          techUsed: "React.js  JSON.server",
          technologies: "React js front-end application with custom css and json server",
-         link: "https://project002-ivory.vercel.app"
+         link: "https://beyondthesavannah.co.ke/"
      }
  ]
 
