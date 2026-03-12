@@ -29,7 +29,7 @@ function AllProj() {
          github: "https://github.com/c4928315/Tovuti_Desk",
          techUsed: "React.js  JSON.server",
          technologies: "React js front-end application with custom css and json server",
-         link: "https://saharadeskdemo.azurewebsites.net"
+         link: "https://test.saharadesk.com/"
      },
       {
          id: 2,
@@ -50,7 +50,17 @@ function AllProj() {
          techUsed: "React.js  JSON.server",
          technologies: "React js front-end application with custom css and json server",
          link: "https://beyondthesavannah.co.ke/"
-     }
+     },
+     {
+      id: 4,
+      name: "Mezame Space",
+      imgUrl: "https://i.postimg.cc/Cxqjf3KB/Screenshot-2026-03-12-113316.png",
+      description: "A wellness site that provides yoga and therapy services to the users, it offers both online and physical sessions ",
+      github: "",
+      techUsed: "Wordpress",
+      technologies: "Wordpress",
+      link: "https://mezame.space/"
+  }
  ]
 
   return (
