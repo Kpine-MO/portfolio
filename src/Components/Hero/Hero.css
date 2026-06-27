@@ -22,7 +22,7 @@
   margin-top: 26px;
   font-size: 55px;
   line-height: 1.05;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.035em;
   max-width: 16ch;
 }
@@ -33,52 +33,93 @@
 
 .heroLead {
   margin-top: 26px;
+  margin-bottom: 40px;
   max-width: 56ch;
-  font-size: 24px;
-  font-weight: 400;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 22px;
+  font-weight: 300;
   color: var(--text-muted);
   line-height: 1.65;
 }
 
 .heroActions {
   margin-top: 36px;
+  align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 14px;
 }
 
-/* stat bar */
+/* stat bar — sits directly on the dark background, no card.
+   4 equal columns (no gap) so column edges land on grid lines 2–6;
+   items hug lines 2, 3 and 5. */
 .heroStats {
   margin-top: clamp(48px, 7vw, 84px);
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  padding: 28px clamp(20px, 4vw, 40px);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  gap: 0;
 }
 
 .statItem {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-left: clamp(20px, 4vw, 48px);
 }
 
-.statItem:first-child {
-  padding-left: 0;
+.statItem:nth-child(3) {
+  grid-column: 4; /* hug grid line 5 (leaves line 4's column empty) */
 }
 
-.statItem + .statItem {
-  border-left: 1px solid var(--border);
+/* current-company logo in place of the 3rd stat */
+.statLogo {
+  position: relative;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* hover tooltip */
+.statLogo::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  padding: 6px 10px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.statLogo:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.companyLogo {
+  height: 38px;
+  width: auto;
+  max-width: 100%;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.statLogo:hover .companyLogo {
+  transform: translateY(-2px);
 }
 
 .statNum {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
+  font-size: 24px;
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--text);
@@ -120,7 +161,7 @@
 }
 
 .statLabel {
-  font-size: 0.9rem;
+  font-size: 16px;
   color: var(--text-muted);
   line-height: 1.35;
 }
@@ -130,9 +171,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
-  .statItem,
-  .statItem + .statItem {
-    padding-left: 0;
-    border-left: none;
+  .statItem:nth-child(3) {
+    grid-column: auto;
   }
 }

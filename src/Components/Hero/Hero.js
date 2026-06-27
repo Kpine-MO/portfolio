@@ -34,16 +34,26 @@ function Hero() {
         <div className="heroStats">
           <div className="statItem">
             <span className="statNum">3<span className="statPlus">+</span></span>
-            <span className="statLabel">Years building<br />for the web</span>
+            <span className="statLabel">Years experience</span>
           </div>
           <div className="statItem">
             <span className="statNum">10<span className="statPlus">+</span></span>
-            <span className="statLabel">Products<br />shipped</span>
+            <span className="statLabel">Products</span>
           </div>
-          <div className="statItem">
-            <span className="statNum">5<span className="statPlus">+</span></span>
-            <span className="statLabel">Core<br />technologies</span>
-          </div>
+          <a
+            className="statItem statLogo"
+            href="https://techsavanna.co.ke/"
+            target="_blank"
+            rel="noreferrer"
+            data-tooltip="Current company"
+            aria-label="Current company: Tech Savanna"
+          >
+            <img
+              className="companyLogo"
+              src="https://techsavanna.co.ke/wp-content/themes/techsavanna/assets/images/tech-savanna-logo.svg"
+              alt="Tech Savanna"
+            />
+          </a>
         </div>
       </div>
     </section>

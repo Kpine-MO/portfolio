@@ -2,14 +2,159 @@
   background: transparent;
 }
 
+/* match the About panel width */
+.skillz .container {
+  max-width: 1066px;
+}
+
 .sectionSub {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 52ch;
 }
 
-.projectDisplay {
+/* ===== Nexo bento card grid ===== */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(16px, 1.6vw, 24px);
+}
+
+.bentoCard {
+  grid-column: span 2; /* md */
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 4vw, 48px);
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 230px;
+  padding: 26px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.015);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+}
+
+.bentoCard.lg {
+  grid-column: span 3;
+}
+
+/* turns into a white card on hover */
+.bentoCard:hover {
+  transform: translateY(-4px);
+  background: #fff;
+  border-color: #fff;
+}
+
+.bentoCard:hover .bentoTitle,
+.bentoCard:hover .bentoArrow {
+  color: #0b1220;
+}
+
+.bentoCard:hover .bentoPill.filled {
+  background: #111;
+  color: #fff;
+}
+
+.bentoCard:hover .bentoPill.outline {
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #0b1220;
+}
+
+.bentoTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bentoPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bentoPill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.bentoPill.filled {
+  background: #fff;
+  color: #0b1220;
+}
+
+.bentoPill.outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text);
+}
+
+.bentoArrow {
+  flex-shrink: 0;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.bentoCard:hover .bentoArrow {
+  transform: translate(3px, -3px);
+}
+
+.bentoTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* highlighted (white) card, like Nexo's "Marketing" */
+.bentoCard.featured {
+  background: #fff;
+  border-color: #fff;
+}
+
+.bentoCard.featured:hover {
+  background: #f1f2f5;
+  border-color: #f1f2f5;
+}
+
+.bentoCard.featured .bentoTitle,
+.bentoCard.featured .bentoArrow {
+  color: #0b1220;
+}
+
+.bentoCard.featured .bentoPill.filled {
+  background: #111;
+  color: #fff;
+}
+
+.bentoCard.featured .bentoPill.outline {
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #0b1220;
+}
+
+@media (max-width: 900px) {
+  .bentoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bentoCard,
+  .bentoCard.lg {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .bentoCard,
+  .bentoCard.lg {
+    grid-column: span 1;
+    min-height: 180px;
+  }
 }

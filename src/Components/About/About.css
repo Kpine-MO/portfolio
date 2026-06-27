@@ -146,27 +146,31 @@
 }
 
 /* black arrow CTA */
+/* same design as the hero CTA, kept dark for the white panel */
 .nexoCta {
   align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
   margin-top: 8px;
-  padding: 12px 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 60px;
+  min-width: clamp(190px, 13.5vw, 260px);
+  padding: 6px 8px 14px 20px;
   background: #111;
   color: #fff;
-  border-radius: 999px;
-  transition: transform 0.18s ease, background 0.18s ease;
+  border-radius: 8px;
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .nexoCtaArrow {
+  align-self: flex-end;
   display: inline-flex;
-  transition: transform 0.18s ease;
-}
-
-.nexoCtaText {
-  font-size: 0.92rem;
-  font-weight: 600;
+  transition: transform 0.3s ease-out;
 }
 
 .nexoCta:hover {
