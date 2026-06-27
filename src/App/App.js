@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect } from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Nav from "../Components/Navigation/Nav";
 import Home from "../Components/Home/Home";
@@ -19,8 +20,41 @@ import { FiGithub } from "react-icons/fi";
 
 
 function App() {
+  useEffect(() => {
+    let raf = 0;
+    const setBurn = (clientX, clientY) => {
+      // bottom-right corner = 0 (hidden); moving toward the top-left
+      // diagonally reveals the warm glow anchored at the bottom-right
+      const dx = 1 - clientX / window.innerWidth; // 0 at right, 1 at left
+      const dy = 1 - clientY / window.innerHeight; // 0 at bottom, 1 at top
+      const burn = Math.min(1, Math.max(0, (dx + dy) / 2));
+      document.documentElement.style.setProperty("--burn", burn.toFixed(3));
+    };
+    const onMove = (e) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        setBurn(e.clientX, e.clientY);
+        raf = 0;
+      });
+    };
+    const onLeave = () =>
+      document.documentElement.style.setProperty("--burn", "0");
+    window.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseleave", onLeave);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseleave", onLeave);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <div className="App">
+      {/* dark-background ambience: warm cursor-revealed glow + grid */}
+      <div className="bgBurn" aria-hidden="true" />
+      <div className="bgGrid" aria-hidden="true" />
+
+      <div className="appContent">
       <div className="socialLinksContainer">
          <div className="socialLinks">
            <div>
@@ -66,6 +100,7 @@ function App() {
           <Route exact path="/allProj" element={<AllProj/>}/>
         </Routes>
       </Router>
+      </div>
     </div>
   );
 }

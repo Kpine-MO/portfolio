@@ -1,68 +1,21 @@
-import React, { useState } from 'react'
-import Hero from '../Hero/Hero'
-import Ps from '../ProjectSnippet/Ps'
-import About from '../About/About'
-import Skills from '../Skills/Skills'
-import Archive from '../Archive/Archive'
-import "./Home.css"
-import Contact from '../Contact/Contact'
-import AllProj from '../AllProjects/AllProj'
-import {Animated} from "react-animated-css";
+import React from "react";
+import Hero from "../Hero/Hero";
+import About from "../About/About";
+import Skills from "../Skills/Skills";
+import AllProj from "../AllProjects/AllProj";
+import Contact from "../Contact/Contact";
+import "./Home.css";
 
 function Home() {
-
-  const [showMenu, setShowMenu] = useState(false)
-
-
   return (
-    <div className='home hideOverflow'>
-      <button className='showMenuBtn' onClick={() => setShowMenu(!showMenu)}>categories</button>
-      {
-        showMenu ? <div id='hide' className='sidePushMenu hideOverflow'>
-        <div className='homeHeaderContent'>
-          <button className='closeBtn' onClick={() => setShowMenu(!showMenu)}>X</button>
-          <h4 className='homeHeader'>Project Categories</h4>
-        </div>
-         <ul>
-          <li onClick={() => setShowMenu(!showMenu)}>React Js</li>
-          <li onClick={() => setShowMenu(!showMenu)}>JavaScript</li>
-          <li onClick={() => setShowMenu(!showMenu)}>Ruby</li>
-          <li onClick={() => setShowMenu(!showMenu)}>CSS</li>
-          <li onClick={() => setShowMenu(!showMenu)}>HTML</li>
-         </ul>
-
-         {/* <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>ShowCase</li>
-          <li>Contact</li>
-         </ul> */}
-      </div> : <div  className='sidePushMenu hideOverflow' >
-      <button className='closeBtn' onClick={() => setShowMenu(!showMenu)}>X</button>
-        <h4 className='homeHeader'>Project Categories</h4>
-         <ul>
-          <li>React Js</li>
-          <li>JavaScript</li>
-          <li>Ruby</li>
-          <li>CSS</li>
-          <li>HTML</li>
-         </ul>
-
-         {/* <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>ShowCase</li>
-          <li>Contact</li>
-         </ul> */}
-      </div>
-      }
-      <Hero/>
-      <About/>
-      <Skills/>
-      <AllProj/>
-      <Contact/>
-    </div>
-  )
+    <main className="home">
+      <Hero />
+      <About />
+      <Skills />
+      <AllProj />
+      <Contact />
+    </main>
+  );
 }
 
-export default Home
+export default Home;

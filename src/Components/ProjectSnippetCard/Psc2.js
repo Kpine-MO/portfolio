@@ -1,31 +1,34 @@
 import React from "react";
-import "./Psc2.css";
+import "./Psc.css";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 function Psc2({ name, imgUrl, descript, technologies, github, link }) {
   return (
-    <div className="Psc2">
-      <div className="projectDetails2">
-        <div className="projectImg-gradient2">
-          <img src={imgUrl} alt={name} className="projectImg2" />
-        </div>
-        <div className="aboutProjectContainer2">
-          <h3 className="feature2">featured project</h3>
-          <h5 className="projectTitle2">
-            <a href={link} target="_blank" style={{color: "white"}}>{name}</a>
-          </h5>
-          <p className="aboutProject2">{descript}</p>
-          <p className="technology2">{technologies}</p>
-          <div className="techIcons2">
-            <a href={github} target="_blank">
-              <FiGithub className="techIconOne2" size={20} />
+    <article className="showcaseCard reverse">
+      <div className="showcaseMedia">
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={imgUrl} alt={name} className="showcaseImg" />
+        </a>
+      </div>
+      <div className="showcaseBody">
+        <span className="feature">Featured project</span>
+        <h3 className="projectTitle">
+          <a href={link} target="_blank" rel="noreferrer">{name}</a>
+        </h3>
+        <p className="aboutProject">{descript}</p>
+        <p className="technology">{technologies}</p>
+        <div className="techIcons">
+          {github ? (
+            <a href={github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <FiGithub size={20} />
             </a>
-            <FiExternalLink className="techIconTwo2" size={20} />
-          </div>
+          ) : null}
+          <a href={link} target="_blank" rel="noreferrer" aria-label="Live site">
+            <FiExternalLink size={20} />
+          </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

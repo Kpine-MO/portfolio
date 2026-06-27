@@ -1,27 +1,35 @@
 import React from "react";
-import { TbHexagon } from "react-icons/tb"
 import { Link } from "react-router-dom";
-import "./Nav.css"
+import "./Nav.css";
 
 function Nav() {
   return (
-    <div className="navContainer hideOverflow">
-      <div className="flexContainer hideOverflow">
-        <div className="logo">
-        <div class="hexagon">
-          <h6 className="logoH6">CO</h6>
-        </div>
-        </div>
-        <div className="navLinks">
+    <header className="navContainer">
+      <div className="flexContainer container">
+        <Link to="/" className="logo">
+          <span className="logoMark">CO</span>
+          <span className="logoWord">Chrispine Ochieng</span>
+        </Link>
+
+        <nav className="navLinks">
           <ol id="ulNavLinks">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/allProj">Show Case</Link></li> 
+            <li><Link to="/allProj">Work</Link></li>
             <li><Link to="/skills">About</Link></li>
-            <li><Link to="/contact">Contacts</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ol>
-        </div>
+        </nav>
+
+        <a
+          className="navCta btn btn-primary"
+          href="https://mail.google.com/mail/u/0/?to=cpine0223@gmail.com&fs=1&tf=cm"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Get in touch
+        </a>
       </div>
-    </div>
+    </header>
   );
 }
 

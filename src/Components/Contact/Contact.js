@@ -1,41 +1,53 @@
 import React from "react";
 import "./Contact.css";
-import { FaReact } from "react-icons/fa"
-import { VscJson } from "react-icons/vsc"
+import { FiGithub, FiLinkedin, FiArrowUpRight } from "react-icons/fi";
 
 function Contact() {
   return (
-    <div className="contactContainer">
-      <div className="contactHolder">
-        <div className="flex contactFlex">
-          <h2 className="numbers contactNumber">3.</h2>
-          <h5 className="contactH5">like what u see ?</h5>
+    <section className="contactContainer section">
+      <div className="container">
+        <div className="contactCard">
+          <span className="eyebrow">04 — What’s next</span>
+          <h2 className="contactH1">Let’s build something together.</h2>
+          <p className="contactP">
+            I’m always open to new opportunities and conversations — whether you
+            have a question, a project in mind, or just want to say hi, my inbox
+            is open.
+          </p>
+          <div className="contactActions">
+            <a
+              className="btn btn-primary"
+              href="https://mail.google.com/mail/u/0/?to=cpine0223@gmail.com&fs=1&tf=cm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Say hello <FiArrowUpRight size={18} />
+            </a>
+            <a
+              className="btn btn-ghost"
+              href="https://github.com/c4928315"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FiGithub size={18} /> GitHub
+            </a>
+          </div>
         </div>
-        <h1 className="contactH1">reach out !</h1>
-        <p className="contactP">
-          I am always looking for opportunities amongst forward driven
-          individuals which pretty much leaves my inbox always open to anyone
-          who has questions or want's to say hi or want's to offer me an
-          opportunity. You can reach me down below.{" "}
-        </p>
-        <a
-          className="contactLink"
-          href="https://mail.google.com/mail/u/0/?to=cpine0223@gmail.com&fs=1&tf=cm" target="_blank"
-        >
-          down below
-        </a>
 
-        <a href="https://github.com/Kpine-MO?tab=repositories" target="_blank">
-        <div className="contactBy">
-            <p>Designed & built by Chrispine Ochieng</p>
-            <div className="contactWith">
-                <FaReact/>
-                <VscJson/>
-            </div>
-        </div>
-        </a>
+        <footer className="contactFooter">
+          <p className="footerName">Chrispine Ochieng</p>
+          <div className="footerSocials">
+            <a href="https://github.com/c4928315" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <FiGithub size={18} />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <FiLinkedin size={18} />
+            </a>
+          </div>
+          <p className="footerNote">Designed &amp; built by Chrispine Ochieng</p>
+        </footer>
       </div>
-    </div>
+    </section>
   );
 }
 
