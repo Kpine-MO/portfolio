@@ -68,7 +68,6 @@ function Skills() {
     <section className="skillz section">
       <div className="container">
         <div className="sectionHead">
-          <span className="eyebrow">02 — Selected work</span>
           <h2 className="sectionTitle">Featured projects</h2>
         </div>
 

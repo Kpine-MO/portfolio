@@ -1,5 +1,11 @@
 .contactContainer {
   background: transparent;
+  padding-top: 0;
+}
+
+/* match the About / Featured-projects width */
+.contactContainer .container {
+  max-width: 1066px;
 }
 
 .contactCard {
@@ -10,25 +16,82 @@
   gap: 18px;
   padding: clamp(44px, 7vw, 88px) clamp(24px, 5vw, 64px);
   background:
-    radial-gradient(70% 120% at 50% 0%, rgba(45, 107, 255, 0.10), transparent 60%),
-    var(--bg-elevated);
-  border: 1px solid var(--border);
+    radial-gradient(70% 120% at 50% 0%, rgba(45, 107, 255, 0.06), transparent 60%),
+    #fff;
+  border: 1px solid #e7eaf0;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+  color: #0b1220;
 }
 
 .contactH1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 800;
+  font-size: 42px;
+  font-weight: 500;
   letter-spacing: -0.035em;
   max-width: 18ch;
+  color: #756859;
 }
 
 .contactP {
   max-width: 52ch;
   font-size: 1.08rem;
-  color: var(--text-muted);
+  color: #5b6675;
   line-height: 1.7;
+}
+
+.contactCard .eyebrow {
+  color: var(--accent);
+}
+
+/* arrow CTA buttons — same design as hero / About */
+.ctaBtn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 60px;
+  min-width: clamp(190px, 13.5vw, 260px);
+  padding: 6px 8px 14px 20px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  border-radius: 8px;
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-align: left;
+  white-space: nowrap;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out,
+    border-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.ctaBtnArrow {
+  align-self: flex-end;
+  display: inline-flex;
+  transition: transform 0.3s ease-out;
+}
+
+.ctaBtn:hover {
+  background: #000;
+  border-color: #000;
+  transform: translateY(-2px);
+}
+
+.ctaBtn:hover .ctaBtnArrow {
+  transform: translate(3px, -3px);
+}
+
+/* light secondary variant */
+.ctaBtn--ghost {
+  background: #fff;
+  color: #0b1220;
+  border: 1px solid #d8dde6;
+}
+
+.ctaBtn--ghost:hover {
+  background: #f5f7fb;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .contactActions {

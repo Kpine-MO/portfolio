@@ -4,6 +4,7 @@ import About from "../About/About";
 import Skills from "../Skills/Skills";
 import AllProj from "../AllProjects/AllProj";
 import Contact from "../Contact/Contact";
+import References from "../References/References";
 import "./Home.css";
 
 function Home() {
@@ -12,8 +13,9 @@ function Home() {
       <Hero />
       <About />
       <Skills />
-      <AllProj />
+      {/* <AllProj /> */}
       <Contact />
+      <References />
     </main>
   );
 }
