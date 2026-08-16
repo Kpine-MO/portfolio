@@ -13,12 +13,18 @@ import Hero from "../Components/Hero/Hero";
 import AllProj from "../Components/AllProjects/AllProj";
 import Skills from "../Components/Skills/Skills";
 import Contact from "../Components/Contact/Contact";
+import CV from "../Components/CV/CV";
+import useScrollReveal from "../hooks/useScrollReveal";
+import useScrollProgress from "../hooks/useScrollProgress";
 import { FiLinkedin } from "react-icons/fi";
 import { CgFigma } from "react-icons/cg";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 
 function App() {
+  useScrollReveal();
+  useScrollProgress();
+
   useEffect(() => {
     let raf = 0;
     const setBurn = (clientX, clientY) => {
@@ -52,6 +58,9 @@ function App() {
       {/* dark-background ambience: warm cursor-revealed glow + grid */}
       <div className="bgBurn" aria-hidden="true" />
       <div className="bgGrid" aria-hidden="true" />
+
+      {/* reading progress along the top edge */}
+      <div className="scrollProgress" aria-hidden="true" />
 
       <div className="appContent">
         {/* <div className="socialLinksContainer">
@@ -89,6 +98,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/skills" element={<Skills />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/cv" element={<CV />} />
             <Route exact path="/hero" element={<Hero />} />
             <Route exact path="/ps" element={<Ps />} />
             <Route exact path="/react" element={<React />} />

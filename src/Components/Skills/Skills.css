@@ -1,23 +1,16 @@
 .skillz {
   background: transparent;
-  padding-top: 0 ;
 }
 
 /* match the About panel width */
 .skillz .container {
-  max-width: 1066px;
+  max-width: var(--content-w);
 }
 
 .sectionSub {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 52ch;
-}
-
-.sectionTitle{
-  font-size: 42px;
-  padding-bottom: 64px;
-  font-weight: 500;
 }
 
 /* ===== Nexo bento card grid ===== */

@@ -30,7 +30,7 @@
 /* faint white vertical grid lines, Nexo-style: 7 lines centered on the page.
    The middle 5 span the About panel, with lines 2 and 6 on its two edges. */
 .bgGrid {
-  --about-w: 1066px;                                       /* About panel width */
+  --about-w: var(--content-w);                             /* About panel width */
   --grid-gap: calc(var(--about-w) / 4);                    /* 266.5px between lines */
   --grid-band: calc(var(--about-w) + var(--grid-gap) * 2); /* 1599px total span */
   top: 0;
@@ -48,10 +48,31 @@
   border-right: 1px solid rgba(255, 255, 255, 0.12); /* line 7 (right edge) */
 }
 
+/* ===== reading-progress bar (fed by useScrollProgress) ===== */
+.scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60;
+  pointer-events: none;
+  background: linear-gradient(90deg, white, white);
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: 0 50%;
+}
+
 /* all real content sits above the ambience layers */
 .appContent {
   position: relative;
   z-index: 1;
+  padding-top: 72px; /* clears the fixed nav bar */
+}
+
+@media (max-width: 520px) {
+  .appContent {
+    padding-top: 64px;
+  }
 }
 
 @media (hover: none) {

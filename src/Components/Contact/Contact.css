@@ -1,11 +1,10 @@
 .contactContainer {
   background: transparent;
-  padding-top: 0;
 }
 
 /* match the About / Featured-projects width */
 .contactContainer .container {
-  max-width: 1066px;
+  max-width: var(--content-w);
 }
 
 .contactCard {
@@ -89,9 +88,9 @@
 }
 
 .ctaBtn--ghost:hover {
-  background: #f5f7fb;
-  border-color: var(--accent);
-  color: var(--accent);
+  background: white;
+  border-color: #756859;
+  color: #756859;
 }
 
 .contactActions {

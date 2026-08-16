@@ -2,7 +2,7 @@ import React from "react";
 import "./Skills.css";
 import { FiArrowUpRight } from "react-icons/fi";
 
-// 3 real projects + 5 mock placeholders (swap the mock ones later).
+// 4 real projects + 4 mock placeholders (swap the mock ones later).
 // size: "md" = 2/6 cols, "lg" = 3/6 cols. Pattern fills rows of 3 / 2 / 3.
 const PROJECTS = [
   {
@@ -20,8 +20,8 @@ const PROJECTS = [
     size: "md",
   },
   {
-    name: "Beyond the Savannah",
-    tag: "React",
+    name: "Career Coach",
+    tag: "React · Figma · MPesa",
     action: "Live demo",
     link: "https://beyondthesavannah.co.ke/",
     size: "md",
@@ -29,29 +29,29 @@ const PROJECTS = [
   {
     name: "Mezame Space",
     tag: "Next.js · Node",
+    action: "Live demo",
+    link: "https://mezame.space/",
+    size: "lg",
+  },
+  {
+    name: "Moringa Connect",
+    tag: "Angular · Rails · REST",
     action: "Case study",
     link: "#",
     size: "lg",
   },
   {
-    name: "DevConnect",
-    tag: "React · Firebase",
-    action: "Case study",
-    link: "#",
-    size: "lg",
-  },
-  {
-    name: "ShopFlow",
-    tag: "React · Stripe",
-    action: "Case study",
-    link: "#",
+    name: "Freelance Jobs",
+    tag: "Figma · UI/UX",
+    action: "View design",
+    link: "https://www.figma.com/design/RXRjWfuSzFpCyc7Ys2A6RQ/Freelance-Jobs?node-id=0-1&p=f&t=WBeOq2O1B2ES9byG-0",
     size: "md",
   },
   {
-    name: "TaskPilot",
-    tag: "React · Rails API",
-    action: "Case study",
-    link: "#",
+    name: "Sahara Desk — Design",
+    tag: "Figma · UI/UX",
+    action: "View design",
+    link: "https://www.figma.com/design/UECDyGrRGKzT3Jxuk92MvX/saharadesk-web?node-id=0-1&p=f&t=HCYrHybpSAtJ0hc9-0",
     size: "md",
   },
   {
@@ -65,20 +65,22 @@ const PROJECTS = [
 
 function Skills() {
   return (
-    <section className="skillz section">
+    <section id="projects" className="skillz section">
       <div className="container">
-        <div className="sectionHead">
+        <div className="sectionHead" data-reveal>
           <h2 className="sectionTitle">Featured projects</h2>
         </div>
 
         <div className="bentoGrid">
-          {PROJECTS.map((p) => (
+          {PROJECTS.map((p, i) => (
             <a
               key={p.name}
               className={`bentoCard ${p.size} ${p.featured ? "featured" : ""}`}
               href={p.link}
               target="_blank"
               rel="noreferrer"
+              data-reveal
+              style={{ "--reveal-delay": `${(i % 3) * 90}ms` }}
             >
               <div className="bentoTop">
                 <div className="bentoPills">

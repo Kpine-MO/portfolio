@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./About.css";
 
-// Right-side images — swap these for whatever you like best.
-import eduImg from "../../Assets/images/pexels-photo-1366909.jpeg";
-import expImg from "../../Assets/images/experience-lg.jpg";
+// Right-side images — themed to each tab (software engineering).
+import eduImg from "../../Assets/images/about-education.jpg";
+import expImg from "../../Assets/images/about-experience.jpg";
 
 const PROFILE_IMG =
   "https://i.postimg.cc/qqv7kwM4/Whats-App-Image-2024-03-01-at-18-00-03.jpg";
 
-const CV_LINK =
-  "https://www.pdffiller.com/jsfiller-desk15/?flat_pdf_quality=low&requestHash=7b97879c0f066d54a5a06bf7a3fe2296a9e6eeccff9ca6c1d07bd47e574e30e5&projectId=1460986011&loader=tips&PAGE_REARRANGE_V2_MVP=true&richTextFormatting=true&isPageRearrangeV2MVP=true&jsf-page-rearrange-v2=true&LATEST_PDFJS=true&jsf-document-scroll-zoom=true&jsf-redesign-full=true&act-notary-pro-integration=false&jsf-new-add-fields-popup=false&routeId=57383640e771b82ba38e253a958364ad#35789600e1d4436c9d2279d04aeb6789";
+const CV_LINK = "/cv";
 
 const TABS = [
   {
@@ -18,27 +18,28 @@ const TABS = [
     label: "About",
     title: "About me",
     img: PROFILE_IMG,
+    imgPos: "center top",
+    imgAspect: "3 / 4",
     paragraphs: [
       <>
-        Hi, I’m <b>Chrispine Ochieng</b> — a software developer and computer
-        science graduate of Moringa School. I enjoy building things that live on
-        the internet, from polished front-end interfaces to the APIs and
-        databases behind them.
+        Hi, I’m <b>Chrispine Ochieng</b> — a <b>frontend developer</b> based in
+        Nairobi, Kenya, with 3+ years turning Figma designs into polished,
+        accessible interfaces in React, Angular and Next.js.
       </>,
       <>
-        My focus is building <b>accessible, reliable products</b> with a clean
-        developer experience. I’m comfortable owning a feature end-to-end —
-        designing the data model, wiring up the backend, and shipping a
-        responsive UI.
+        My focus is building <b>reliable, user-focused products</b> — from
+        reusable, design-system-driven components to the REST and GraphQL
+        integrations behind them. I’m comfortable owning a feature end-to-end and
+        shipping fast without cutting corners on quality.
       </>,
     ],
     chips: [
       "React.js",
-      "JavaScript",
-      "Ruby on Rails",
-      "Node.js",
-      "PostgreSQL",
-      "HTML & CSS",
+      "Angular",
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Figma",
     ],
     cta: { text: "View CV", href: CV_LINK },
   },
@@ -55,22 +56,22 @@ const TABS = [
     ],
     entries: [
       {
-        role: "Software Engineering",
-        org: "Moringa School",
-        date: "Access Program · FlatIron curriculum",
-        desc: "Six-month, full-stack engineering program covering JavaScript, React, Ruby and Rails — shipping project-based apps with real databases and APIs.",
+        role: "BSc, Software Engineering",
+        org: "Muranga University",
+        date: "Degree",
+        desc: "Studied software engineering fundamentals — data structures, systems and the practices behind building maintainable software.",
       },
       {
-        role: "Software Engineering",
-        org: "ALX",
-        date: "Backend & systems track",
-        desc: "Deepened computer-science fundamentals, data structures and backend systems through rigorous, peer-driven projects.",
+        role: "Certificate, Software Engineering",
+        org: "Moringa School",
+        date: "Apr 2022 — Nov 2022",
+        desc: "Intensive, project-based program covering web development, testing and deployment — shipping full-stack apps with real databases and APIs.",
       },
       {
         role: "Continuous learning",
         org: "Self-directed",
         date: "Ongoing",
-        desc: "Keep up with modern tooling and patterns by building side projects and following the ecosystem.",
+        desc: "Keep up with modern frontend tooling and patterns by building side projects and following the ecosystem.",
       },
     ],
     cta: { text: "View CV", href: CV_LINK },
@@ -82,22 +83,34 @@ const TABS = [
     img: expImg,
     paragraphs: [
       <>
-        I’ve delivered production web apps for real clients, owning features from
-        design through to deployment.
+        I’ve delivered production frontends for enterprise and client products,
+        owning features from Figma through to deployment.
       </>,
     ],
     entries: [
       {
-        role: "Frontend / Full-stack Developer",
-        org: "Freelance & contract",
-        date: "2023 — present",
-        desc: "Built and shipped client products including Sahara Desk, Elewa Education and Beyond the Savannah using React, custom APIs and tailored UI.",
+        role: "Frontend Developer (Safaricom project)",
+        org: "TechSavanna",
+        date: "Mar 2026 — Present",
+        desc: "Building and maintaining frontend features for enterprise web apps in React, Next.js and TypeScript — reusable components from Figma, REST/GraphQL integrations with Apollo Client, and API-driven user journeys.",
       },
       {
-        role: "Project-based engineering",
-        org: "Moringa & ALX",
-        date: "2021 — 2023",
-        desc: "Delivered numerous full-stack applications with authentication, REST APIs and responsive front-ends in fast-paced, collaborative sprints.",
+        role: "Frontend Developer & Designer",
+        org: "Beyond Savannah",
+        date: "Feb 2024 — Nov 2025",
+        desc: "Designed and built the Career Coach app with React and a component-driven architecture — translating Figma designs into UI components and integrating REST APIs and MPesa.",
+      },
+      {
+        role: "Frontend Developer",
+        org: "Tovuti Group",
+        date: "Aug 2023 — Jan 2024",
+        desc: "Developed scalable frontend components for an asset-management platform in React and Bootstrap, with responsive layouts and cross-browser performance in Agile sprints.",
+      },
+      {
+        role: "Junior Frontend Developer",
+        org: "I-talanta",
+        date: "Jan 2023 — Jun 2023",
+        desc: "Built organization websites and frontend features in Angular and React, integrating RESTful APIs and collaborating via Git in daily standups.",
       },
     ],
     cta: { text: "See my work", href: "https://github.com/c4928315" },
@@ -109,9 +122,9 @@ function About() {
   const tab = TABS[active];
 
   return (
-    <section className="aboutMeContainer section">
+    <section id="about" className="aboutMeContainer section">
       <div className="container">
-        <div className="nexoPanel">
+        <div className="nexoPanel" data-reveal>
           <div className="nexoTabs" role="tablist">
             {TABS.map((t, i) => (
               <button
@@ -161,21 +174,36 @@ function About() {
                 </div>
               )}
 
-              <a
-                className="nexoCta"
-                href={tab.cta.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="nexoCtaArrow">
-                  <FiArrowUpRight size={18} />
-                </span>
-                <span className="nexoCtaText">{tab.cta.text}</span>
-              </a>
+              {tab.cta.href.startsWith("/") ? (
+                <Link className="nexoCta" to={tab.cta.href}>
+                  <span className="nexoCtaArrow">
+                    <FiArrowUpRight size={18} />
+                  </span>
+                  <span className="nexoCtaText">{tab.cta.text}</span>
+                </Link>
+              ) : (
+                <a
+                  className="nexoCta"
+                  href={tab.cta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="nexoCtaArrow">
+                    <FiArrowUpRight size={18} />
+                  </span>
+                  <span className="nexoCtaText">{tab.cta.text}</span>
+                </a>
+              )}
             </div>
 
             <div className="nexoRight">
-              <img className="nexoImg" src={tab.img} alt={tab.title} />
+              <img
+                className="nexoImg"
+                src={tab.img}
+                alt={tab.title}
+                data-reveal="right"
+                style={{ "--reveal-delay": "120ms", objectPosition: tab.imgPos || "center top" }}
+              />
             </div>
           </div>
         </div>

@@ -4,8 +4,9 @@
     radial-gradient(60% 80% at 80% -10%, rgba(255, 255, 255, 0.06), transparent 60%),
     radial-gradient(50% 60% at 0% 10%, rgba(255, 255, 255, 0.04), transparent 60%),
     transparent;
+  /* roomier above the headline than the standard rhythm; the bottom keeps the
+     shared --section-space from .section so Hero → About matches every other gap */
   padding-top: clamp(72px, 12vw, 140px);
-  padding-bottom: clamp(56px, 8vw, 96px);
   overflow: hidden;
 }
 
@@ -14,7 +15,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 1066px; /* match the About panel width */
+  max-width: var(--content-w); /* match the About panel width */
   margin-inline: auto;
 }
 

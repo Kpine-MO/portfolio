@@ -6,7 +6,7 @@ function Contact() {
   return (
     <section className="contactContainer section">
       <div className="container">
-        <div className="contactCard">
+        <div className="contactCard" data-reveal="zoom">
           <h2 className="contactH1">Let’s build something together.</h2>
           <p className="contactP">
             I’m always open to new opportunities and conversations — whether you

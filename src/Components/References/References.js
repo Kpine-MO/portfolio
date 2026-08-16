@@ -39,16 +39,22 @@ const REFERENCES = [
 
 function References() {
   return (
-    <section className="referencesContainer section">
+    <section id="references" className="referencesContainer section">
       <div className="container">
-        <div className="refHead">
-          <span className="eyebrow">05 — References</span>
-          <h2 className="sectionTitle">What employers say</h2>
+        <div className="refHead" data-reveal>
+          <h2 className="sectionTitle">Employer story</h2>
+          {/* <span className="eyebrow">05 — References</span> */}
+          
         </div>
 
         <div className="refGrid">
           {REFERENCES.map((r, i) => (
-            <figure className="refCard" key={i}>
+            <figure
+              className="refCard"
+              key={i}
+              data-reveal
+              style={{ "--reveal-delay": `${(i % 3) * 90}ms` }}
+            >
               <FaQuoteLeft className="refQuote" size={22} />
               <blockquote className="refText">{r.text}</blockquote>
               <figcaption className="refAuthor">
@@ -59,7 +65,7 @@ function References() {
           ))}
         </div>
 
-        <footer className="contactFooter">
+        <footer className="contactFooter" data-reveal="fade">
           <p className="footerName">Chrispine Ochieng</p>
           <div className="footerSocials">
             <a

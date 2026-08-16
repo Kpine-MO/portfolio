@@ -4,16 +4,16 @@
 
 /* match the other sections' width */
 .referencesContainer .container {
-  max-width: 1066px;
+  max-width: var(--content-w);
 }
 
 .refHead {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
   gap: 16px;
-  margin-bottom: clamp(36px, 5vw, 56px);
+  margin-bottom: var(--section-head-space);
 }
 
 /* masonry via CSS columns */
@@ -36,7 +36,7 @@
 }
 
 .refQuote {
-  color: var(--accent);
+  color: #0b1220;
   flex-shrink: 0;
 }
 
@@ -44,7 +44,7 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: #2a2a2a;
+  color: #756859;
 }
 
 .refAuthor {
