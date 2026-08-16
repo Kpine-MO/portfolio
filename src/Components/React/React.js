@@ -38,16 +38,16 @@ function ProjectReact() {
          technologies: "React js front-end application with custom css and json server",
          link: "https://beyondthesavannah.co.ke/"
      },
-    //   {
-    //      id: 4,
-    //      name: "Mezame Space",
-    //      imgUrl: "https://i.postimg.cc/3wGpxcYj/Screenshot-2025-07-01-at-21-15-57.png",
-    //      description: "Our wellness app supports both physical and mental health, offering a safe space for self-care, growth, and meaningful connections within a supportive community.",
-    //      github: "https://github.com/c4928315/new_mezama",
-    //      techUsed: "Next.js  node.js ",
-    //      technologies: "React js front-end application with custom css and node.js for backend",
-    //      link: "https://beyondthesavannah.co.ke/"
-    //  }
+      {
+         id: 4,
+         name: "Mezame Space",
+         imgUrl: "https://i.postimg.cc/Cxqjf3KB/Screenshot-2026-03-12-113316.png",
+         description: "A wellness site that provides yoga and therapy services to the users, it offers both online and physical sessions ",
+         github: "",
+         techUsed: "Wordpress",
+         technologies: "Wordpress",
+         link: "https://mezame.space/"
+     }
  ]
 
   // useEffect(() => {
