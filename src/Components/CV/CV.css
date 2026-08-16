@@ -1,0 +1,306 @@
+.cvPage {
+  min-height: 100vh;
+}
+
+/* action bar */
+.cvActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  max-width: var(--content-w);
+  margin-inline: auto;
+}
+
+.cvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: #756859;
+  color: #fff;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.cvBtn:hover {
+  transform: translateY(-2px);
+}
+
+.cvBtn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-strong, rgba(255, 255, 255, 0.18));
+}
+
+.cvBtn--ghost:hover {
+  border-color: #756859;
+  color: #cbb89f;
+}
+
+/* the sheet */
+.cvSheet {
+  background: #ebeae6;
+  color: #23201b;
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 56px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  max-width: var(--content-w);
+  margin-inline: auto;
+}
+
+/* header */
+.cvHead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 22px;
+  margin-bottom: 26px;
+}
+
+.cvName {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  color: #1a1712;
+}
+
+.cvRole {
+  margin: 6px 0 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #756859;
+  letter-spacing: 0.01em;
+}
+
+.cvContact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.cvContact li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+  color: #5a5349;
+}
+
+.cvContact a {
+  color: #5a5349;
+  transition: color 0.18s ease;
+}
+
+.cvContact a:hover {
+  color: #756859;
+}
+
+/* blocks */
+.cvBlock {
+  margin-bottom: 30px;
+}
+
+.cvBlock:last-child {
+  margin-bottom: 0;
+}
+
+.cvBlockTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #756859;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(117, 104, 89, 0.28);
+}
+
+.cvSummary {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #3a352d;
+}
+
+/* two-column body */
+.cvGrid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 40px;
+}
+
+/* experience */
+.cvEntry {
+  margin-bottom: 22px;
+}
+
+.cvEntry:last-child {
+  margin-bottom: 0;
+}
+
+.cvEntryHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cvEntryRole {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1f1c17;
+}
+
+.cvEntryDate {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #8a8073;
+  white-space: nowrap;
+}
+
+.cvEntryOrg {
+  margin: 2px 0 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #756859;
+}
+
+.cvBullets {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cvBullets li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3a352d;
+}
+
+/* projects */
+.cvProject {
+  margin-bottom: 16px;
+}
+
+.cvProject:last-child {
+  margin-bottom: 0;
+}
+
+.cvProjectName {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1f1c17;
+}
+
+.cvProjectStack {
+  margin: 2px 0 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #756859;
+}
+
+.cvProjectDesc {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #3a352d;
+}
+
+/* skills / education (aside) */
+.cvSkill,
+.cvEdu {
+  margin-bottom: 14px;
+}
+
+.cvSkill:last-child,
+.cvEdu:last-child {
+  margin-bottom: 0;
+}
+
+.cvSkillGroup,
+.cvEduAward {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0 0 3px;
+  color: #1f1c17;
+}
+
+.cvSkillItems {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #3a352d;
+}
+
+.cvEduSchool {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #756859;
+}
+
+.cvEduDate {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+  color: #8a8073;
+}
+
+.cvEduNote {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #3a352d;
+}
+
+@media (max-width: 760px) {
+  .cvGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* ---- print: just the sheet, ink-friendly ---- */
+@media print {
+  /* hide site chrome */
+  .navContainer,
+  .navBackdrop,
+  .navPopover,
+  .scrollProgress,
+  .bgGrid,
+  .bgBurn,
+  [data-noprint] {
+    display: none !important;
+  }
+
+  .appContent {
+    padding-top: 0 !important;
+  }
+
+  .cvPage {
+    padding: 0 !important;
+  }
+
+  .cvSheet {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+}

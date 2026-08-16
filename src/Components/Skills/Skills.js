@@ -1,36 +1,100 @@
 import React from "react";
 import "./Skills.css";
-import { GrReactjs } from "react-icons/gr";
-import { VscProject } from "react-icons/vsc";
-import { BsTools } from "react-icons/bs";
-import { TbBulb } from "react-icons/tb";
-import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io";
-import { SiRubygems, SiCsswizardry } from "react-icons/si";
-import { MdOutlineSettingsSuggest } from "react-icons/md";
-import { Link } from "react-router-dom";
-import ProjectReact from "../React/React";
+import { FiArrowUpRight } from "react-icons/fi";
+
+// Real projects — live apps and Figma designs.
+// size: "md" = 2/6 cols, "lg" = 3/6 cols. Pattern fills rows of 3 / 2 / 3.
+const PROJECTS = [
+  {
+    name: "Sahara Desk",
+    tag: "React · JSON Server",
+    action: "Live demo",
+    link: "https://portal.saharadesk.com/",
+    size: "md",
+  },
+  {
+    name: "Elewa Education",
+    tag: "React",
+    action: "Live demo",
+    link: "https://elewa.co.ke/home",
+    size: "md",
+  },
+  {
+    name: "Career Coach",
+    tag: "React · Figma · MPesa",
+    action: "Live demo",
+    link: "https://beyondthesavannah.co.ke/",
+    size: "md",
+  },
+  {
+    name: "Mezame Space",
+    tag: "Next.js · Node",
+    action: "Live demo",
+    link: "https://mezame.space/",
+    size: "lg",
+  },
+  {
+    name: "Moringa Connect",
+    tag: "Angular · Rails · REST",
+    action: "Case study",
+    link: "#",
+    size: "lg",
+  },
+  {
+    name: "Freelance Jobs",
+    tag: "Figma · UI/UX",
+    action: "View design",
+    link: "https://www.figma.com/design/RXRjWfuSzFpCyc7Ys2A6RQ/Freelance-Jobs?node-id=0-1&p=f&t=WBeOq2O1B2ES9byG-0",
+    size: "md",
+  },
+  {
+    name: "Sahara Desk — Design",
+    tag: "Figma · UI/UX",
+    action: "View design",
+    link: "https://www.figma.com/design/UECDyGrRGKzT3Jxuk92MvX/saharadesk-web?node-id=0-1&p=f&t=HCYrHybpSAtJ0hc9-0",
+    size: "md",
+  },
+  {
+    name: "Portfolio",
+    tag: "React · CSS",
+    action: "Live demo",
+    link: "https://portfolio-kpine-mo.vercel.app",
+    size: "md",
+  },
+];
 
 function Skills() {
-  const icons = {
-    color: "#8892b0",
-  };
   return (
-    <div className="skillz">
-      <div className="skillsLayer1">
-        <div className="flex">
-          <div className="Number">
-            <h2 className="numbersShowCase">2.</h2>
-          </div>
-          <div className="styleDiv pull">
-            <h3 className="skillsMain allProjH1 ">Top Projects</h3>
-            <div className="spanStyle spanStyleSkills"></div>
-          </div>
+    <section id="projects" className="skillz section">
+      <div className="container">
+        <div className="sectionHead" data-reveal>
+          <h2 className="sectionTitle">Featured projects</h2>
         </div>
-        <div className="projectDisplay">
-          <ProjectReact />
+
+        <div className="bentoGrid">
+          {PROJECTS.map((p, i) => (
+            <a
+              key={p.name}
+              className={`bentoCard ${p.size} ${p.featured ? "featured" : ""}`}
+              href={p.link}
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+              style={{ "--reveal-delay": `${(i % 3) * 90}ms` }}
+            >
+              <div className="bentoTop">
+                <div className="bentoPills">
+                  <span className="bentoPill filled">{p.action}</span>
+                  <span className="bentoPill outline">{p.tag}</span>
+                </div>
+                <FiArrowUpRight className="bentoArrow" size={22} />
+              </div>
+              <h3 className="bentoTitle">{p.name}</h3>
+            </a>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

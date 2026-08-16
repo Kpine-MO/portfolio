@@ -64,46 +64,59 @@ function AllProj() {
  ]
 
   return (
-    <div className="allProjContainer hideOverflow">
-      <div className="center">
-      <div className="allProjHeader">
-        <div>
-        <h1 className="allProjH1">Noteworthy Projects</h1>
-        <p className="pFlex">view my archive</p>
+    <section className="allProjContainer section">
+      <div className="container">
+        <div className="sectionHead">
+          <span className="eyebrow">03 — More work</span>
+          <h2 className="sectionTitle">Other noteworthy projects</h2>
         </div>
-      </div>
-      <div className="child hideOverflow">
-        {array.slice(0, visible).map((item, i) => {
-          return (
-            <div className="card" key={i}>
-              <div className="cardTop">
-                <div className="cardTopLeft">
-                  <CiFolderOn size={50} />
+
+        <div className="child">
+          {array.slice(0, visible).map((item, i) => {
+            return (
+              <a
+                className="card"
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cardTop">
+                  <div className="cardTopLeft">
+                    <CiFolderOn size={28} />
+                  </div>
+                  <div className="techIcons cardTopRight">
+                    {item.github ? (
+                      <span
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open(item.github, "_blank");
+                        }}
+                        aria-label="GitHub"
+                      >
+                        <FiGithub size={18} />
+                      </span>
+                    ) : null}
+                    <FiExternalLink size={18} />
+                  </div>
                 </div>
-                <div className="techIcons cardTopRight">
-                  <a href={item.github} target="_blank">
-                    <FiGithub className="techIconOne" size={18} />
-                  </a>
-                  <a href={item.link} target="_blank" style={{color: "white"}}>
-                   <FiExternalLink className="techIconTwo" size={18} /> 
-                  </a>
-                  
-                </div>
-              </div>
-              <h2 className="allProjName">{item.name}</h2>
-              <p className="allProjDescription">{item.description}</p>
-              <p className="techUsed">{item.techUsed}</p>
-            </div>
-          );
-        })}
+                <h3 className="allProjName">{item.name}</h3>
+                <p className="allProjDescription">{item.description}</p>
+                <p className="techUsed">{item.techUsed}</p>
+              </a>
+            );
+          })}
+        </div>
+
+        {visible < array.length && (
+          <div className="allProjBtn">
+            <button className="btn btn-ghost" onClick={showMoreItems}>
+              Show more
+            </button>
+          </div>
+        )}
       </div>
-      <div className="allProjBtn">
-        <button className="contactLink contactLinkBtn" onClick={showMoreItems}>
-          show more
-        </button>
-      </div>
-      </div>
-    </div>
+    </section>
   );
 }
 

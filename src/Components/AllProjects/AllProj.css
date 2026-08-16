@@ -1,124 +1,93 @@
-.allProjContainer{
-    /* background-color: rgba(12,116,159,255); */
-    background-color: rgba(10,25,47,255);
-    width: 90%;
-    height: fit-content;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+.allProjContainer {
+  background: transparent;
 }
 
-.card{
-    width: 280px;
-    height: 280px;
-    background-color: rgba(17,34,64,255);
-    padding: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: margin-top 0.55s;
+.child {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(18px, 2.4vw, 28px);
 }
 
-.card:hover{
-    margin-top: -5px;
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.card:hover .allProjName{
-    color: rgba(100,255,218,255);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: rgba(117, 104, 89, 0.32);
 }
 
-.allProjHolder{
-    width: 100%;
-    margin: 0px auto;
-    height: fit-content;
-    position: relative;
-    height: fit-content;
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-.child{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0px auto;
-    height: fit-content;
-    gap: 10px;
-    justify-content: center;
+.cardTopLeft {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
-.cardTop{
-    display: flex;
-    justify-content: space-between;
+.techIcons.cardTopRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-muted);
 }
 
-.cardTopRight{
-    margin-top: 20px;
+.techIcons.cardTopRight span,
+.techIcons.cardTopRight svg {
+  cursor: pointer;
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
-.cardTopLeft{
-    color: rgba(100,255,218,255);
+.techIcons.cardTopRight span:hover,
+.card:hover .techIcons.cardTopRight > svg {
+  color: #756859;
 }
 
-.allProjName{
-    color: #ccd6f6;
-    text-transform: capitalize;
-    transition: color 1s;
-    font-family: Open Sans;
-}
-.allProjDescription{
-    color: #8892b0;
-    font-size: small;
-    font-family: Open Sans;
-    margin-bottom: 0;
+.allProjName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+  transition: color 0.18s ease;
 }
 
-.allProjBtn{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.card:hover .allProjName {
+  color: #756859;
 }
 
-.contactLinkBtn{
-    margin-top: 50px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    margin-bottom: 50px;
+.allProjDescription {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.96rem;
+  flex: 1;
 }
 
-.contactLinkBtn:hover{
-    background-color: rgba(30, 72, 84, 0.5);
+.techUsed {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-.allProjH1{
-    color: #ccd6f6;
-    font-size: xx-large;
-    text-transform: capitalize;
-    font-family: Open Sans;
-}
-
-.techUsed{
-    font-size: medium;
-    color: #8892b0;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: 15px;
-    word-spacing: 20px;
-}
-
-.allProjHeader{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 70px;
-    margin-top: 120px;
-}
-
-.pFlex{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    color: rgba(100,255,218,255);
-    font-family: Courier; 
-    font-size: small; 
-    font-style: normal; 
+.allProjBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(32px, 4vw, 48px);
 }

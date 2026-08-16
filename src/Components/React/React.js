@@ -16,12 +16,12 @@ function ProjectReact() {
          github: "https://github.com/c4928315/Tovuti_Desk",
          techUsed: "React.js  JSON.server",
          technologies: "React js front-end application with custom css and json server",
-         link: "https://test.saharadesk.com/"
+         link: "https://portal.saharadesk.com/"
      },
       {
          id: 2,
          name: "Elewa Education",
-         imgUrl: "https://i.postimg.cc/1XVWh5Kc/Screenshot-2024-03-01-at-15-46-11.png",
+         imgUrl: "https://i.postimg.cc/vmb2rfTV/Screenshot-2025-07-01-at-21-05-14.png",
          description: "An application with the purpose of bringing education closer to the consumers",
          github: "https://github.com/c4928315/elewa-website",
          techUsed: "React.js  JSON.server",
@@ -31,9 +31,9 @@ function ProjectReact() {
       {
          id: 3,
          name: "Beyond The Savannah",
-         imgUrl: "https://i.postimg.cc/hjXFvnrh/Screenshot-2024-03-01-at-15-28-12.png",
+         imgUrl: "https://i.postimg.cc/pXd2Z593/Screenshot-2025-07-01-at-20-54-39.png",
          description: "A it is a career coach website expected to provide premium packages and a job vacancies links. ",
-         github: "https://github.com/c4928315/jobFinder",
+         github: "",
          techUsed: "React.js  JSON.server",
          technologies: "React js front-end application with custom css and json server",
          link: "https://beyondthesavannah.co.ke/"
@@ -48,9 +48,6 @@ function ProjectReact() {
          technologies: "Wordpress",
          link: "https://mezame.space/"
      }
-
-
-     
  ]
 
   // useEffect(() => {
@@ -93,6 +90,7 @@ function ProjectReact() {
             />
           }
         })
+        // test
       }
     </div>
   )

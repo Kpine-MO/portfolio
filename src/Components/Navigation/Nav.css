@@ -1,105 +1,266 @@
-.navContainer{
-    width: 100%;
-    z-index: 100;
-    height: 70px;
-    background-color: rgba(10,25,47,0.98);
-    position: fixed;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 var(--gutter);
+  background: rgba(11, 12, 16, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.flexContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0px auto;
-    font-size: medium;
-    cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-}
-
-.logo{
-    color: rgba(100,255,218,255);
-    margin-top: 15px;
-}
-
-#ulNavLinks a:hover{
-    color: #8892b0;
-}
-
-#ulNavLinks{
-  display: flex;  
+.flexContainer {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 24px;
+  height: 72px;
   width: 100%;
-  margin-top: 25px;
-  color: lightgrey;
-  margin-left: 20px;
+  max-width: var(--content-w);
+  margin-inline: auto;
 }
 
-#ulNavLinks a{
-    padding-bottom: 5px;
-    border: 2px solid transparent;
-    transition: 1s;
-    font-weight: lighter;
-    font-family: Courier; 
-    font-size: medium; 
-    font-style: normal; 
-    text-decoration: none;
-    color: #ccd6f6;
-    margin-right: 10px;
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
 }
 
-ol {
-    list-style: none;
-    counter-reset: my-awesome-counter;
-  }
-  
-  ol li {
-    counter-increment: my-awesome-counter;
-  }
-  
-  ol li::before {
-    content: counter(my-awesome-counter) ". ";
-    color: rgba(100,255,218,255);
-    font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
-  }
-
-.navLinks{
-    margin-right: 160px;
+.logoMark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: -0.03em;
+  box-shadow: 0 4px 12px rgba(45, 107, 255, 0.32);
 }
 
-.hexagon {
+.logoWord {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* ---- Center toggle button (Nexo-style) ---- */
+.navToggle {
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  transform: translate(-50%, -50%);
+  width: 2.9em;
+  height: 2.9em;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 120;
+  transition: border-color 0.25s ease, background 0.25s ease,
+    transform 0.25s ease, opacity 0.25s ease;
+}
+
+.navToggle:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navToggleLine {
+  display: block;
+  width: 16px;
+  height: 1.6px;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform 0.32s cubic-bezier(0.6, 0, 0.2, 1),
+    opacity 0.2s ease;
+}
+
+/* Hide the toggle while open — the card's own close button takes over */
+.navToggle.isOpen {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* ---- Backdrop ---- */
+.navBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 10, 0.55);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 105;
+}
+
+.navBackdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---- Popover card ---- */
+.navPopover {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 110;
+  pointer-events: none;
+}
+
+.navCard {
   position: relative;
-  height: 40px;
-  width: 35px;
-  background: rgba(100,255,218,255);
-}
-.hexagon:before, .double:after {
-  position: absolute;
-  content: '';
-}
-.hexagon:before {
-  top: 2px;  /* border width */
-  left: 2px;  /* border width */
-  height: calc(100% - 4px);  /* 100% - (2 * border width) */
-  width: calc(100% - 4px);  /* 100% - (2 * border width) */
-  color: rgba(100,255,218,255);
-  background: rgba(10,25,47,255);
-}
-.hexagon, .hexagon:before, .double:after {
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: min(360px, calc(100vw - 32px));
+  background: #ebeae6;
+  border-radius: 30px;
+  padding: 26px 30px 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  transform-origin: top center;
+  opacity: 0;
+  transform: scale(0.82) translateY(-14px);
+  transition: opacity 0.28s ease, transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.logoH6{
-  color: rgba(100,255,218,255);
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  text-align: center;
-  font-size: medium;
-  bottom: -26.5px;
+.navPopover.show {
+  pointer-events: auto;
+}
+
+.navPopover.show .navCard {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* close button inside card */
+.navClose {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 0, 0, 0.18);
+  background: transparent;
+  color: #14151a;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.navClose:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+/* links */
+.navLinks ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navLinks li {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.navPopover.show .navLinks li {
+  animation: navLinkIn 0.5s cubic-bezier(0.34, 1.3, 0.64, 1) forwards;
+  animation-delay: calc(0.12s + var(--i) * 0.05s);
+}
+
+@keyframes navLinkIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navLinks li a {
+  display: block;
+  padding: 6px 4px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #14151a;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.navLinks li a:hover {
+  color: #5b5b57;
+  transform: translateX(4px);
+}
+
+/* divider */
+.navDivider {
+  height: 1px;
+  margin: 22px 0 18px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* socials */
+.navSocials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navSocial {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #14151a;
+  color: #ebeae6;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.navSocial:hover {
+  transform: translateY(-3px);
+  background: #756859;
+  color: #fff;
+}
+
+.navCta {
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  z-index: 2;
+  background: white;
+  color: black;
+}
+
+@media (max-width: 860px) {
+  .logoWord {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .flexContainer {
+    height: 64px;
+  }
+  .navToggle {
+    top: 32px;
+  }
+  .navCta {
+    display: none;
+  }
 }

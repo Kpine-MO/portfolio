@@ -1,181 +1,160 @@
-.skillz{
-    height: fit-content;
+.skillz {
+  background: transparent;
 }
 
-.skillsLayer1 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0px;
-
+/* match the About panel width */
+.skillz .container {
+  max-width: var(--content-w);
 }
 
-.developmentCells{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin-right: 150px;
+.sectionSub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 52ch;
 }
 
-.development{
-    margin-right: 30px;
+/* ===== Nexo bento card grid ===== */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(16px, 1.6vw, 24px);
 }
 
-.cells{
-    background-color: transparent;
-    border: 1px solid #8892b0;
-    color: #ccd6f6;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 50%;
-    margin: 10px;
-    font-size: small;
-    width: 20px;
-    height: 20px;
-    align-items: center;
+.bentoCard {
+  grid-column: span 2; /* md */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 230px;
+  padding: 26px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.015);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
 }
 
-.skillsFlex{
-    display: flex;
-    width: 350px;
-    justify-content: space-between;
-    margin-top: 60px;
+.bentoCard.lg {
+  grid-column: span 3;
 }
 
-
-.projectsDoneCells{
-    display: flex;
-    justify-content: space-between;
-    color: #8892b0;
-    width: 250px;
+/* turns into a white card on hover */
+.bentoCard:hover {
+  transform: translateY(-4px);
+  background: #fff;
+  border-color: #fff;
 }
 
-.skillsH3{
-    color: #8892b0;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: x-large;
-    margin-bottom: 40px;
+.bentoCard:hover .bentoTitle,
+.bentoCard:hover .bentoArrow {
+  color: #0b1220;
 }
 
-.skillsFlex ul{
-    list-style: none;
-    color: #ccd6f6;
-    margin-top: -20px;
-    line-height: 1.5em;
+.bentoCard:hover .bentoPill.filled {
+  background: #111;
+  color: #fff;
 }
 
-.skillsUnderLine{
-    width: 115px;
-    border-radius: 10px;
-    height: 3px;
-    background-color: rgba(100,255,218,255);
-    position: absolute;
-    left: 140px;
-    margin-top: -55px;
+.bentoCard:hover .bentoPill.outline {
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #0b1220;
 }
 
-
-.pDCells a {
-    color: #ccd6f6;
-    transition: color 1s;
+.bentoTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.pDCells a:hover{
-    color: rgba(100,255,218,255);
+.bentoPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.skillsFlex ul li:before {
-    content: '✓    ';
+.bentoPill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
-.skillsFlex li {
-    margin-left: -50px;
-    font-family: sans-serif;
-    font-weight: lighter;
-    text-transform: capitalize;
+.bentoPill.filled {
+  background: #fff;
+  color: #0b1220;
 }
 
-.skillsMain{
-    color: #ccd6f6;
-    font-size: xx-large;
-    text-transform: capitalize;
-    font-family: Open Sans;
-    position: absolute;
-    left: 150px;
-    margin-top: -100px;
-    width: fit-content;
+.bentoPill.outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text);
 }
 
-.spanStyleSkills{
-   margin-left: 550px;
-   margin-top: -75px;
+.bentoArrow {
+  flex-shrink: 0;
+  color: var(--text);
+  transition: transform 0.2s ease;
 }
 
-.styleDiv{
-    width: 500px;
-    left: 20px;
-    position: absolute;
+.bentoCard:hover .bentoArrow {
+  transform: translate(3px, -3px);
 }
 
-
-
-.skillsIcon{
-    color: #8892b0;
-    position: absolute;
+.bentoTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
-.pDCells{
-    cursor: pointer;
+/* highlighted (white) card, like Nexo's "Marketing" */
+.bentoCard.featured {
+  background: #fff;
+  border-color: #fff;
 }
 
-
-.settingsIcon{
-    margin-top: 25px;
-    margin-left: -35px;
+.bentoCard.featured:hover {
+  background: #f1f2f5;
+  border-color: #f1f2f5;
 }
 
-.projectsIcon{
-    margin-top: 5px;
-    margin-left: -30px;
+.bentoCard.featured .bentoTitle,
+.bentoCard.featured .bentoArrow {
+  color: #0b1220;
 }
 
-.toolsIcon{
-    margin-top: 30px;
-    margin-left: -30px;
+.bentoCard.featured .bentoPill.filled {
+  background: #111;
+  color: #fff;
 }
 
-.bulbIcon{
-    margin-top: 20px;
-    margin-left: -35px;
+.bentoCard.featured .bentoPill.outline {
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #0b1220;
 }
 
-.projectDisplay{
-    width: 90%;
-    height: fit-content;
-    max-height: 200vh;
-    margin-top: 0px;
+@media (max-width: 900px) {
+  .bentoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bentoCard,
+  .bentoCard.lg {
+    grid-column: span 1;
+  }
 }
 
-.numbersShowCase{
-    color: rgba(100,255,218,255);
-    font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-
-.Number{
-    position: absolute;
-    top: -118px;
-    left: 105px;
-}
-
-.flex{
-    position: relative;
-}
-
-.pull{
-    margin-left: -20px;
+@media (max-width: 560px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .bentoCard,
+  .bentoCard.lg {
+    grid-column: span 1;
+    min-height: 180px;
+  }
 }

@@ -1,30 +1,34 @@
 import React from "react";
 import "./Psc.css";
-import { FiGithub, FiExternalLink } from "react-icons/fi"
-import { Link } from "react-router-dom";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 function Psc({ name, imgUrl, descript, technologies, github, link }) {
   return (
-    <div className="Psc">
-      <div className="projectDetails">
-        <div className="aboutProjectContainer">
-          <h3 className="feature">featured project</h3>
-          <h5 className="projectTitle">
-          <a href={link} target="_blank" style={{color: "white"}}>{name}</a>
-          </h5>
-          <p className="aboutProject">{descript}</p>
-          <p className="technology">{technologies}</p>
-          <div className="techIcons">
-            <a href={github} target="_blank"><FiGithub className="techIconOne" size={20}/></a>
-            <FiExternalLink className="techIconTwo"  size={20}/>
-          </div>
-        </div>
-        <div className="projectImg-gradient">
-        <img src={imgUrl} alt={name} className="projectImg"/>
-        </div>
-        
+    <article className="showcaseCard">
+      <div className="showcaseMedia">
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={imgUrl} alt={name} className="showcaseImg" />
+        </a>
       </div>
-    </div>
+      <div className="showcaseBody">
+        <span className="feature">Featured project</span>
+        <h3 className="projectTitle">
+          <a href={link} target="_blank" rel="noreferrer">{name}</a>
+        </h3>
+        <p className="aboutProject">{descript}</p>
+        <p className="technology">{technologies}</p>
+        <div className="techIcons">
+          {github ? (
+            <a href={github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <FiGithub size={20} />
+            </a>
+          ) : null}
+          <a href={link} target="_blank" rel="noreferrer" aria-label="Live site">
+            <FiExternalLink size={20} />
+          </a>
+        </div>
+      </div>
+    </article>
   );
 }
 
