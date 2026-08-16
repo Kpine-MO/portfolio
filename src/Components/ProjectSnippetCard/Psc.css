@@ -66,7 +66,7 @@
 }
 
 .projectTitle a:hover {
-  color: var(--accent);
+  color: #756859;
 }
 
 .aboutProject {
@@ -93,7 +93,7 @@
 }
 
 .techIcons a:hover {
-  color: var(--accent);
+  color: #756859;
   transform: translateY(-2px);
 }
 

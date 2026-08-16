@@ -23,7 +23,7 @@
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
-  border-color: var(--accent-border);
+  border-color: rgba(117, 104, 89, 0.32);
 }
 
 .cardTop {
@@ -57,7 +57,7 @@
 
 .techIcons.cardTopRight span:hover,
 .card:hover .techIcons.cardTopRight > svg {
-  color: var(--accent);
+  color: #756859;
 }
 
 .allProjName {
@@ -69,7 +69,7 @@
 }
 
 .card:hover .allProjName {
-  color: var(--accent-ink);
+  color: #756859;
 }
 
 .allProjDescription {

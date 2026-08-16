@@ -172,9 +172,9 @@ code {
 }
 
 .btn-primary:hover {
-  background: var(--accent-ink);
+  background: #756859;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(45, 107, 255, 0.34);
+  box-shadow: 0 10px 24px rgba(117, 104, 89, 0.34);
 }
 
 .btn-ghost {
@@ -184,9 +184,9 @@ code {
 }
 
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent-ink);
-  background: var(--accent-soft);
+  border-color: #756859;
+  color: #756859;
+  background: rgba(117, 104, 89, 0.12);
   transform: translateY(-2px);
 }
 

@@ -77,7 +77,7 @@ function References() {
               <FiGithub size={18} />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/chrispine-ochieng-2421ab244/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

@@ -13,7 +13,7 @@ const NAV_LINKS = [
 ];
 
 const SOCIALS = [
-  { icon: <FaLinkedinIn />, href: "https://www.linkedin.com", label: "LinkedIn" },
+  { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/chrispine-ochieng-2421ab244/", label: "LinkedIn" },
   { icon: <FaXTwitter />, href: "https://x.com", label: "X" },
   { icon: <FaInstagram />, href: "https://www.instagram.com", label: "Instagram" },
   { icon: <FaGithub />, href: "https://github.com/c4928315", label: "GitHub" },

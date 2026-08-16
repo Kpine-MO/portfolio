@@ -2,7 +2,7 @@ import React from "react";
 import "./Skills.css";
 import { FiArrowUpRight } from "react-icons/fi";
 
-// 4 real projects + 4 mock placeholders (swap the mock ones later).
+// Real projects — live apps and Figma designs.
 // size: "md" = 2/6 cols, "lg" = 3/6 cols. Pattern fills rows of 3 / 2 / 3.
 const PROJECTS = [
   {
@@ -55,10 +55,10 @@ const PROJECTS = [
     size: "md",
   },
   {
-    name: "FinTrack",
-    tag: "React · Chart.js",
-    action: "Case study",
-    link: "#",
+    name: "Portfolio",
+    tag: "React · CSS",
+    action: "Live demo",
+    link: "https://portfolio-kpine-mo.vercel.app",
     size: "md",
   },
 ];

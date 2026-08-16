@@ -234,7 +234,7 @@
 
 .navSocial:hover {
   transform: translateY(-3px);
-  background: var(--accent);
+  background: #756859;
   color: #fff;
 }
 
