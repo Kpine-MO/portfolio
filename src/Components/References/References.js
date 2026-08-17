@@ -3,36 +3,36 @@ import "./References.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 
-// Placeholder employer references — swap for real ones.
+// Employer references.
 const REFERENCES = [
   {
     text: "Chrispine ships clean, production-ready work — consistently ahead of schedule.",
-    name: "Daniel K.",
+    name: "Ian Ochieng",
     role: "Engineering Lead · Tech Savanna",
   },
   {
     text: "He owns problems end to end, from the data model to a polished UI, and keeps everyone aligned with clear communication. One of the most dependable engineers I’ve managed.",
-    name: "Sarah M.",
+    name: "Mary Murugi",
     role: "Product Manager",
   },
   {
     text: "Give him an unfamiliar stack and he’s productive within days. A genuinely fast learner.",
-    name: "James O.",
+    name: "Carter Masila",
     role: "Senior Developer",
   },
   {
     text: "Reliable, collaborative, and obsessed with good user experience. Our front-end quality jumped after he joined.",
-    name: "Aisha N.",
+    name: "Dishon Omina",
     role: "Team Lead",
   },
   {
-    text: "Chrispine’s APIs are thoughtfully designed and his interfaces are pixel-accurate. He brought structure and momentum to our project while mentoring the junior devs.",
-    name: "Brian W.",
-    role: "CTO",
+    text: "Chrispine’s interfaces are pixel-accurate and his components are a pleasure to build on. He brought structure and momentum to our project.",
+    name: "Alvin Odumo",
+    role: "Senior Frontend Developer",
   },
   {
-    text: "A standout full-stack contributor I’d hire again without hesitation.",
-    name: "Grace L.",
+    text: "A standout contributor I’d work with again without hesitation — dependable, sharp, and easy to collaborate with.",
+    name: "Margaret Ochieng",
     role: "Project Manager",
   },
 ];
